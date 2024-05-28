@@ -40,7 +40,7 @@ wire w_win;
 wire w_mux2x1_hex5;
 
 mux2x1 U01(
-	.a_i(7'b011_1000), //mudar numeros
+	.a_i(7'b011_1000), ///mudar numeros
 	.b_i(7'b011_1000), //mudar numeros
 	.sel_i(w_win),
 	.d_o(w_mux2x1_hex5)
