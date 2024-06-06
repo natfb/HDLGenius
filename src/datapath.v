@@ -24,6 +24,7 @@ module datapath(
 );
 
 parameter p_key = 4;
+parameter p_counter_tempo = 4;
 parameter p_switch = 8;
 parameter p_hex = 7;
 parameter p_led = 4;
@@ -51,6 +52,17 @@ mux2x1 U00(
 	.b_i(w_mux2x1_hex5),
 	.sel_i(SEL),
 	.d_o(hex5)
+);
+
+wire [p_counter_tempo-1:0] w_TEMPO;
+wire w_end_time;
+
+Counter_time U02 (
+	 .CLKT(CLOCK_50), 
+	 .R(R2), 
+	 .E(E2), 
+	 .TEMPO(),
+	 .end_time()
 );
 
 endmodule

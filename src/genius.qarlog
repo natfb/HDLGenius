@@ -1,0 +1,24 @@
+Quartus II Archive log --	C:/GitHub/HDLGenius/src/genius.qarlog
+
+Archive:	C:/GitHub/HDLGenius/src/genius.qar
+Date:		Thu Jun 06 19:47:52 2024
+Quartus II 64-Bit		13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/GitHub/HDLGenius/prj/genius.qpf
+C:/GitHub/HDLGenius/prj/genius.qsf
+C:/GitHub/HDLGenius/prj/incremental_db/compiled_partitions/genius.db_info
+C:/GitHub/HDLGenius/src/Counter_time.v
+C:/GitHub/HDLGenius/src/FSM_clock.v
+C:/GitHub/HDLGenius/src/REG_FPGA.v
+C:/GitHub/HDLGenius/src/REG_User.v
+C:/GitHub/HDLGenius/src/REG_setup.v
+C:/GitHub/HDLGenius/src/controle.v
+C:/GitHub/HDLGenius/src/datapath.v
+C:/GitHub/HDLGenius/src/mux2x1.v
+C:/GitHub/HDLGenius/src/top.v
+c:/altera/13.0sp1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 13 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.

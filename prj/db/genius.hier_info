@@ -4,8 +4,8 @@ KEY[0] => KEY[0].IN1
 KEY[1] => KEY[1].IN1
 KEY[2] => KEY[2].IN1
 KEY[3] => KEY[3].IN1
-SW[0] => SW[0].IN1
-SW[1] => SW[1].IN1
+SW[0] => w_e2.IN3
+SW[1] => w_r2.IN3
 SW[2] => SW[2].IN1
 SW[3] => SW[3].IN1
 SW[4] => SW[4].IN1
@@ -69,7 +69,7 @@ HEX5[6] <= datapath:u00.hex5
 
 
 |top|datapath:u00
-CLOCK_50 => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -83,9 +83,9 @@ SWITCH[5] => ~NO_FANOUT~
 SWITCH[6] => ~NO_FANOUT~
 SWITCH[7] => ~NO_FANOUT~
 R1 => ~NO_FANOUT~
-R2 => ~NO_FANOUT~
+R2 => R2.IN1
 E1 => ~NO_FANOUT~
-E2 => ~NO_FANOUT~
+E2 => E2.IN1
 E3 => ~NO_FANOUT~
 E4 => ~NO_FANOUT~
 SEL => SEL.IN1
@@ -154,6 +154,25 @@ a_i => d_o.DATAB
 b_i => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
 d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|Counter_time:U02
+CLKT => end_time~reg0.CLK
+CLKT => TEMPO[0]~reg0.CLK
+CLKT => TEMPO[1]~reg0.CLK
+CLKT => TEMPO[2]~reg0.CLK
+CLKT => TEMPO[3]~reg0.CLK
+R => TEMPO[0]~reg0.ACLR
+R => TEMPO[1]~reg0.ACLR
+R => TEMPO[2]~reg0.ACLR
+R => TEMPO[3]~reg0.ACLR
+R => end_time~reg0.ENA
+E => ~NO_FANOUT~
+TEMPO[0] <= TEMPO[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TEMPO[1] <= TEMPO[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TEMPO[2] <= TEMPO[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+TEMPO[3] <= TEMPO[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+end_time <= end_time~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|controle:U01

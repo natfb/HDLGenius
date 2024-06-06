@@ -65,4 +65,7 @@ controle U01(
 	.SEL(w_sel)
 );
 
+assign w_r2 = SW[0];
+assign w_e2 = SW[1];
+
 endmodule
