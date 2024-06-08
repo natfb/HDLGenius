@@ -12,6 +12,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	FSM_clock
 
+} {} {}} C:/GitHub/HDLGenius/src/Counter_time.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter_time.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Counter_time
+
+Top level modules:
+	Counter_time
+
 } {} {}} C:/GitHub/HDLGenius/src/controle.v {1 {vlog -work work C:/GitHub/HDLGenius/src/controle.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module controle
