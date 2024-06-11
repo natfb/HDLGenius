@@ -16,7 +16,7 @@ localparam P_KEY = 4;
 localparam P_SW = 10;
 localparam P_led = 10;
 localparam P_hex = 7;
-
+;
 input wire 	CLOCK_50;
 input wire [P_SW-1:0] SW;
 input wire [P_KEY-1:0] KEY;
