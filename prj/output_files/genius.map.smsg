@@ -1,1 +1,2 @@
-Warning (10268): Verilog HDL information at FSM_clock.v(17): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at controle.v(22): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at FSM_clock.v(18): always construct contains both blocking and non-blocking assignments

@@ -4,8 +4,8 @@ KEY[0] => KEY[0].IN1
 KEY[1] => KEY[1].IN1
 KEY[2] => KEY[2].IN1
 KEY[3] => KEY[3].IN1
-SW[0] => w_e2.IN3
-SW[1] => w_r2.IN3
+SW[0] => SW[0].IN1
+SW[1] => SW[1].IN1
 SW[2] => SW[2].IN1
 SW[3] => SW[3].IN1
 SW[4] => SW[4].IN1
@@ -88,21 +88,21 @@ E1 => ~NO_FANOUT~
 E2 => E2.IN1
 E3 => ~NO_FANOUT~
 E4 => ~NO_FANOUT~
-SEL => SEL.IN1
-hex0[0] <= <GND>
-hex0[1] <= <GND>
-hex0[2] <= <GND>
-hex0[3] <= <GND>
-hex0[4] <= <GND>
-hex0[5] <= <GND>
-hex0[6] <= <GND>
-hex1[0] <= <GND>
-hex1[1] <= <GND>
-hex1[2] <= <GND>
-hex1[3] <= <GND>
-hex1[4] <= <GND>
-hex1[5] <= <GND>
-hex1[6] <= <GND>
+SEL => SEL.IN4
+hex0[0] <= mux2x1:Uhex00.d_o
+hex0[1] <= mux2x1:Uhex00.d_o
+hex0[2] <= mux2x1:Uhex00.d_o
+hex0[3] <= mux2x1:Uhex00.d_o
+hex0[4] <= mux2x1:Uhex00.d_o
+hex0[5] <= mux2x1:Uhex00.d_o
+hex0[6] <= mux2x1:Uhex00.d_o
+hex1[0] <= mux2x1:Uhex01.d_o
+hex1[1] <= mux2x1:Uhex01.d_o
+hex1[2] <= mux2x1:Uhex01.d_o
+hex1[3] <= mux2x1:Uhex01.d_o
+hex1[4] <= mux2x1:Uhex01.d_o
+hex1[5] <= mux2x1:Uhex01.d_o
+hex1[6] <= mux2x1:Uhex01.d_o
 hex2[0] <= <GND>
 hex2[1] <= <GND>
 hex2[2] <= <GND>
@@ -110,13 +110,13 @@ hex2[3] <= <GND>
 hex2[4] <= <GND>
 hex2[5] <= <GND>
 hex2[6] <= <GND>
-hex3[0] <= <GND>
-hex3[1] <= <GND>
-hex3[2] <= <GND>
-hex3[3] <= <GND>
-hex3[4] <= <GND>
-hex3[5] <= <GND>
-hex3[6] <= <GND>
+hex3[0] <= mux2x1:Uhex03_1.d_o
+hex3[1] <= mux2x1:Uhex03_1.d_o
+hex3[2] <= mux2x1:Uhex03_1.d_o
+hex3[3] <= mux2x1:Uhex03_1.d_o
+hex3[4] <= mux2x1:Uhex03_1.d_o
+hex3[5] <= mux2x1:Uhex03_1.d_o
+hex3[6] <= mux2x1:Uhex03_1.d_o
 hex4[0] <= <GND>
 hex4[1] <= <GND>
 hex4[2] <= <GND>
@@ -156,18 +156,92 @@ sel_i => d_o.OUTPUTSELECT
 d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top|datapath:u00|mux2x1:Uhex03
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux2x1:Uhex03_1
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux2x1:Uhex01
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|dec7seg:hex1_D1
+bcd_i[0] => Decoder0.IN3
+bcd_i[1] => Decoder0.IN2
+bcd_i[2] => Decoder0.IN1
+bcd_i[3] => Decoder0.IN0
+seg_o[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux2x1:Uhex00
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|dec7seg:hex0_D2
+bcd_i[0] => Decoder0.IN3
+bcd_i[1] => Decoder0.IN2
+bcd_i[2] => Decoder0.IN1
+bcd_i[3] => Decoder0.IN0
+seg_o[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|dec7seg:hex0_D1
+bcd_i[0] => Decoder0.IN3
+bcd_i[1] => Decoder0.IN2
+bcd_i[2] => Decoder0.IN1
+bcd_i[3] => Decoder0.IN0
+seg_o[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top|datapath:u00|Counter_time:U02
 CLKT => end_time~reg0.CLK
 CLKT => TEMPO[0]~reg0.CLK
 CLKT => TEMPO[1]~reg0.CLK
 CLKT => TEMPO[2]~reg0.CLK
 CLKT => TEMPO[3]~reg0.CLK
+R => end_time~reg0.ACLR
 R => TEMPO[0]~reg0.ACLR
 R => TEMPO[1]~reg0.ACLR
 R => TEMPO[2]~reg0.ACLR
 R => TEMPO[3]~reg0.ACLR
-R => end_time~reg0.ENA
-E => ~NO_FANOUT~
+E => end_time~reg0.ENA
+E => TEMPO[3]~reg0.ENA
+E => TEMPO[2]~reg0.ENA
+E => TEMPO[1]~reg0.ENA
+E => TEMPO[0]~reg0.ENA
 TEMPO[0] <= TEMPO[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TEMPO[1] <= TEMPO[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TEMPO[2] <= TEMPO[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -176,20 +250,43 @@ end_time <= end_time~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|controle:U01
-CLOCK => ~NO_FANOUT~
-enter => ~NO_FANOUT~
-reset => ~NO_FANOUT~
-end_FPGA => ~NO_FANOUT~
-end_User => ~NO_FANOUT~
-end_time => ~NO_FANOUT~
-win => ~NO_FANOUT~
-match => ~NO_FANOUT~
-R1 <= <GND>
-R2 <= <GND>
-E1 <= <GND>
-E2 <= <GND>
-E3 <= <GND>
-E4 <= <GND>
-SEL <= <GND>
+CLOCK => state~1.DATAIN
+enter => next_state.OUTPUTSELECT
+enter => next_state.OUTPUTSELECT
+enter => next_state.OUTPUTSELECT
+enter => next_state.OUTPUTSELECT
+enter => next_state.OUTPUTSELECT
+enter => next_state.OUTPUTSELECT
+enter => next_state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_FPGA => next_state.OUTPUTSELECT
+end_User => next_state.DATAA
+end_User => next_state.DATAA
+end_time => next_state.OUTPUTSELECT
+end_time => next_state.OUTPUTSELECT
+end_time => Selector6.IN5
+win => Selector6.IN6
+win => Selector2.IN3
+match => Selector5.IN4
+match => Selector6.IN4
+R1 <= R1.DB_MAX_OUTPUT_PORT_TYPE
+R2 <= R2.DB_MAX_OUTPUT_PORT_TYPE
+E1 <= E1.DB_MAX_OUTPUT_PORT_TYPE
+E2 <= E2.DB_MAX_OUTPUT_PORT_TYPE
+E3 <= E3.DB_MAX_OUTPUT_PORT_TYPE
+E4 <= E4.DB_MAX_OUTPUT_PORT_TYPE
+SEL <= SEL.DB_MAX_OUTPUT_PORT_TYPE
 
 
