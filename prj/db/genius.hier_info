@@ -124,13 +124,13 @@ hex4[3] <= mux2x1:Uhex04_1.d_o
 hex4[4] <= mux2x1:Uhex04_1.d_o
 hex4[5] <= mux2x1:Uhex04_1.d_o
 hex4[6] <= mux2x1:Uhex04_1.d_o
-hex5[0] <= mux2x1:U00.d_o
-hex5[1] <= mux2x1:U00.d_o
-hex5[2] <= mux2x1:U00.d_o
-hex5[3] <= mux2x1:U00.d_o
-hex5[4] <= mux2x1:U00.d_o
-hex5[5] <= mux2x1:U00.d_o
-hex5[6] <= mux2x1:U00.d_o
+hex5[0] <= mux2x1:Uhex05_1.d_o
+hex5[1] <= mux2x1:Uhex05_1.d_o
+hex5[2] <= mux2x1:Uhex05_1.d_o
+hex5[3] <= mux2x1:Uhex05_1.d_o
+hex5[4] <= mux2x1:Uhex05_1.d_o
+hex5[5] <= mux2x1:Uhex05_1.d_o
+hex5[6] <= mux2x1:Uhex05_1.d_o
 leds[0] <= <GND>
 leds[1] <= <GND>
 leds[2] <= <GND>
@@ -138,18 +138,18 @@ leds[3] <= <GND>
 end_FPGA <= <GND>
 end_User <= <GND>
 end_time <= <GND>
-win <= <GND>
+win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
 
 
-|top|datapath:u00|mux2x1:U01
+|top|datapath:u00|mux2x1:Uhex05
 a_i => d_o.DATAB
 b_i => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
 d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|datapath:u00|mux2x1:U00
+|top|datapath:u00|mux2x1:Uhex05_1
 a_i => d_o.DATAB
 b_i => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
