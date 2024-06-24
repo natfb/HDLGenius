@@ -88,7 +88,7 @@ E1 => ~NO_FANOUT~
 E2 => E2.IN1
 E3 => ~NO_FANOUT~
 E4 => ~NO_FANOUT~
-SEL => SEL.IN4
+SEL => SEL.IN6
 hex0[0] <= mux2x1:Uhex00.d_o
 hex0[1] <= mux2x1:Uhex00.d_o
 hex0[2] <= mux2x1:Uhex00.d_o
@@ -103,13 +103,13 @@ hex1[3] <= mux2x1:Uhex01.d_o
 hex1[4] <= mux2x1:Uhex01.d_o
 hex1[5] <= mux2x1:Uhex01.d_o
 hex1[6] <= mux2x1:Uhex01.d_o
-hex2[0] <= <GND>
-hex2[1] <= <GND>
-hex2[2] <= <GND>
-hex2[3] <= <GND>
-hex2[4] <= <GND>
-hex2[5] <= <GND>
-hex2[6] <= <GND>
+hex2[0] <= mux2x1:Uhex02_1.d_o
+hex2[1] <= mux2x1:Uhex02_1.d_o
+hex2[2] <= mux2x1:Uhex02_1.d_o
+hex2[3] <= mux2x1:Uhex02_1.d_o
+hex2[4] <= mux2x1:Uhex02_1.d_o
+hex2[5] <= mux2x1:Uhex02_1.d_o
+hex2[6] <= mux2x1:Uhex02_1.d_o
 hex3[0] <= mux2x1:Uhex03_1.d_o
 hex3[1] <= mux2x1:Uhex03_1.d_o
 hex3[2] <= mux2x1:Uhex03_1.d_o
@@ -117,13 +117,13 @@ hex3[3] <= mux2x1:Uhex03_1.d_o
 hex3[4] <= mux2x1:Uhex03_1.d_o
 hex3[5] <= mux2x1:Uhex03_1.d_o
 hex3[6] <= mux2x1:Uhex03_1.d_o
-hex4[0] <= <GND>
-hex4[1] <= <GND>
-hex4[2] <= <GND>
-hex4[3] <= <GND>
-hex4[4] <= <GND>
-hex4[5] <= <GND>
-hex4[6] <= <GND>
+hex4[0] <= mux2x1:Uhex04_1.d_o
+hex4[1] <= mux2x1:Uhex04_1.d_o
+hex4[2] <= mux2x1:Uhex04_1.d_o
+hex4[3] <= mux2x1:Uhex04_1.d_o
+hex4[4] <= mux2x1:Uhex04_1.d_o
+hex4[5] <= mux2x1:Uhex04_1.d_o
+hex4[6] <= mux2x1:Uhex04_1.d_o
 hex5[0] <= mux2x1:U00.d_o
 hex5[1] <= mux2x1:U00.d_o
 hex5[2] <= mux2x1:U00.d_o
@@ -156,6 +156,34 @@ sel_i => d_o.OUTPUTSELECT
 d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|top|datapath:u00|mux2x1:Uhex04
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|dec7seg:hex4_D4
+bcd_i[0] => Decoder0.IN3
+bcd_i[1] => Decoder0.IN2
+bcd_i[2] => Decoder0.IN1
+bcd_i[3] => Decoder0.IN0
+seg_o[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux2x1:Uhex04_1
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |top|datapath:u00|mux2x1:Uhex03
 a_i => d_o.DATAB
 b_i => d_o.DATAA
@@ -164,6 +192,34 @@ d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex03_1
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux2x1:Uhex02
+a_i => d_o.DATAB
+b_i => d_o.DATAA
+sel_i => d_o.OUTPUTSELECT
+d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|dec7seg:hex2_D2
+bcd_i[0] => Decoder0.IN3
+bcd_i[1] => Decoder0.IN2
+bcd_i[2] => Decoder0.IN1
+bcd_i[3] => Decoder0.IN0
+seg_o[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux2x1:Uhex02_1
 a_i => d_o.DATAB
 b_i => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT

@@ -56,6 +56,25 @@ mux2x1 U00(
 );
 
 //hex4
+mux2x1 Uhex04(
+	.a_i(7'b011_1000), ///mudar numeros
+	.b_i(7'b011_1000), //mudar numeros
+	.sel_i(w_win),
+	.d_o(w_mux2x1_hex4)
+);
+
+dec7seg hex4_D4(
+    .bcd_i(),  //points[7:4}
+    .seg_o(w_hex4_dec)
+);
+
+mux2x1 Uhex04_1(
+	.a_i(w_hex4_dec), ///mudar numeros
+	.b_i(w_mux2x1_hex4),
+	.sel_i(SEL),
+	.d_o(hex4)
+);
+
 //hex3
 mux2x1 Uhex03(
 	.a_i(7'b011_1000), ///mudar numeros
@@ -72,6 +91,25 @@ mux2x1 Uhex03_1(
 );
 
 //hex2
+mux2x1 Uhex02(
+	.a_i(7'b011_1000), ///mudar numeros
+	.b_i(7'b011_1000), //mudar numeros
+	.sel_i(w_win),
+	.d_o(w_mux2x1_hex2)
+);
+
+dec7seg hex2_D2(
+    .bcd_i(),  //points[7:4}
+    .seg_o(w_hex2_dec)
+);
+
+mux2x1 Uhex02_1(
+	.a_i(w_hex2_dec), ///mudar numeros
+	.b_i(w_mux2x1_hex2),
+	.sel_i(SEL),
+	.d_o(hex2)
+);
+
 //hex1
 mux2x1 Uhex01(
 	.a_i(7'b000_0000), ///mudar numero
