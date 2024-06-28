@@ -13,7 +13,7 @@ input wire CLK, R, E;
 input wire [N-1:0] data;
 output reg [N-1:0] q; 
 
-always@(posedge CLK or negedge R)
+always@(posedge CLK or posedge R)
 begin
 	if (R == 1'b1) //1 ou 0?
 		q <= 4'b0000;

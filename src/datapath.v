@@ -198,6 +198,40 @@ Counter_FPGA U03 (
 	.SEQFPGA()
 );
 
+//registradores
+wire reg_user_and_or, reg_user_and; 
+wire [3:0] NBTN;
+wire [63:0] OUT_User;
+
+REG_User(
+	.CLK(CLOCK_50),
+	.R(R2),
+	.E(reg_user_and),
+	.data({NBTN[3:0], OUT_User[63:4]}),
+	.q(OUT_User[63:0])
+);
+
+or(reg_user_and_or, NBTN[0], NBTN[1], NBTN[2], NBTN[3]); //?
+and(reg_user_and, reg_user_and_or, E2);
+
+wire [63:0] OUT_FPGA;
+REG_FPGA(
+	.CLK(CLKHZ),
+	.R(R2),
+	.E(E3),
+	.data({SEQFPGA, OUT_FPGA[63:4]}),
+	.q(OUT_FPGA),
+	.q3() //?
+);
+
+REG_setup(
+	.CLK(CLOCK_50),
+	.R(R1),
+	.E(E1),
+	.SW(SWITCH[7:0]), //SW(9..2)
+	.setup(SETUP)
+);
+
 wire w_c025, w_05, w_c1, w_c2;
 FSM_clock fsm_c (
 	.reset(R1),
@@ -210,11 +244,12 @@ FSM_clock fsm_c (
 
 wire CLKHZ;
 mux4x1_1bit(
-	.level(),
+	.level(SETUP[7:6]),
 	.CL1(w_c025),
 	.CL2(w_c05),
 	.CL3(w_c1),
 	.CL4(w_c2),
 	.CLKHZ(CLKHZ)
 );
+
 endmodule

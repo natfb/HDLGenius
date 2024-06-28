@@ -15,7 +15,7 @@ input wire [N-1:0] data;
 output reg [N-1:0] q; 
 output reg [3:0] q3;
 
-always@(posedge CLK or negedge R)
+always@(posedge CLK or posedge R)
 begin
 	if (R == 1'b1) //1 ou 0?
 		begin
@@ -26,7 +26,7 @@ begin
 		if (E == 1'b1)
 			begin
 			q <= data;
-			q3 <= data[N:N-3];
+			q3 <= data[N-1:N-4];
 			end
 		else 
 		   q <= q;
