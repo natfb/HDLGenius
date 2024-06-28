@@ -1,0 +1,32 @@
+module seq_00
+#(parameter SIZE = 4)
+(
+	address,
+	saida
+);
+
+input wire [SIZE-1:0] address;
+output wire [SIZE-1:0] saida;
+
+always @(address) begin
+        case (address)
+		address = 4’b0000: output = 4’b0001
+		address = 4’b0001: output = 4’b0001
+		address = 4’b0010: output = 4’b0001
+		address = 4’b0011: output = 4’b0001
+		address = 4’b0100: output = 4’b0001
+		address = 4’b0101: output = 4’b0001
+		address = 4’b0110: output = 4’b0001
+		address = 4’b0111: output = 4’b0001
+		address = 4’b1000: output = 4’b0001
+		address = 4’b1001: output = 4’b0001
+		address = 4’b1010: output = 4’b0001
+		address = 4’b1011: output = 4’b0001
+		address = 4’b1100: output = 4’b0001
+		address = 4’b1101: output = 4’b0001
+		address = 4’b1110: output = 4’b0001
+		address = 4’b1111: output = 4’b0001
+        endcase
+    end
+    
+endmodule

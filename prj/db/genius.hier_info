@@ -69,7 +69,7 @@ HEX5[6] <= datapath:u00.hex5
 
 
 |top|datapath:u00
-CLOCK_50 => CLOCK_50.IN1
+CLOCK_50 => CLOCK_50.IN3
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -82,12 +82,12 @@ SWITCH[4] => ~NO_FANOUT~
 SWITCH[5] => ~NO_FANOUT~
 SWITCH[6] => ~NO_FANOUT~
 SWITCH[7] => ~NO_FANOUT~
-R1 => ~NO_FANOUT~
-R2 => R2.IN1
+R1 => R1.IN1
+R2 => R2.IN2
 E1 => ~NO_FANOUT~
 E2 => E2.IN1
-E3 => ~NO_FANOUT~
-E4 => ~NO_FANOUT~
+E3 => E3.IN1
+E4 => E4.IN1
 SEL => SEL.IN6
 hex0[0] <= mux2x1:Uhex00.d_o
 hex0[1] <= mux2x1:Uhex00.d_o
@@ -140,6 +140,7 @@ end_User <= <GND>
 end_time <= <GND>
 win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
+SEQFPGA <= <GND>
 
 
 |top|datapath:u00|mux2x1:Uhex05
@@ -303,6 +304,56 @@ TEMPO[1] <= TEMPO[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TEMPO[2] <= TEMPO[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 TEMPO[3] <= TEMPO[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 end_time <= end_time~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|Counter_round:U01
+data[0] => Equal0.IN3
+data[1] => Equal0.IN2
+data[2] => Equal0.IN1
+data[3] => Equal0.IN0
+clk => win~reg0.CLK
+clk => ROUND[0]~reg0.CLK
+clk => ROUND[1]~reg0.CLK
+clk => ROUND[2]~reg0.CLK
+clk => ROUND[3]~reg0.CLK
+R => win~reg0.ACLR
+R => ROUND[0]~reg0.ACLR
+R => ROUND[1]~reg0.ACLR
+R => ROUND[2]~reg0.ACLR
+R => ROUND[3]~reg0.ACLR
+E => win~reg0.ENA
+E => ROUND[3]~reg0.ENA
+E => ROUND[2]~reg0.ENA
+E => ROUND[1]~reg0.ENA
+E => ROUND[0]~reg0.ENA
+win <= win~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[0] <= ROUND[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[1] <= ROUND[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[2] <= ROUND[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[3] <= ROUND[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|Counter_FPGA:U03
+data[0] => Equal0.IN3
+data[1] => Equal0.IN2
+data[2] => Equal0.IN1
+data[3] => Equal0.IN0
+clk => ~NO_FANOUT~
+R => SEQFPGA[3]$latch.ACLR
+R => SEQFPGA[2]$latch.ACLR
+R => SEQFPGA[1]$latch.ACLR
+R => SEQFPGA[0]$latch.ACLR
+R => end_FPGA$latch.ACLR
+E => SEQFPGA[3]$latch.LATCH_ENABLE
+E => SEQFPGA[2]$latch.LATCH_ENABLE
+E => SEQFPGA[1]$latch.LATCH_ENABLE
+E => SEQFPGA[0]$latch.LATCH_ENABLE
+E => end_FPGA$latch.LATCH_ENABLE
+end_FPGA <= end_FPGA$latch.DB_MAX_OUTPUT_PORT_TYPE
+SEQFPGA[0] <= SEQFPGA[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SEQFPGA[1] <= SEQFPGA[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SEQFPGA[2] <= SEQFPGA[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+SEQFPGA[3] <= SEQFPGA[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|controle:U01

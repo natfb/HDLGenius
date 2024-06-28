@@ -1,23 +1,16 @@
-C:/GitHub/HDLGenius/src/mux2x1.v {1 {vlog -work work C:/GitHub/HDLGenius/src/mux2x1.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module mux2x1
-
-Top level modules:
-	mux2x1
-
-} {} {}} C:/GitHub/HDLGenius/src/FSM_clock.v {1 {vlog -work work C:/GitHub/HDLGenius/src/FSM_clock.v
+C:/GitHub/HDLGenius/src/FSM_clock.v {1 {vlog -work work C:/GitHub/HDLGenius/src/FSM_clock.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module FSM_clock
 
 Top level modules:
 	FSM_clock
 
-} {} {}} C:/GitHub/HDLGenius/src/Counter_time.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter_time.v
+} {} {}} C:/GitHub/HDLGenius/src/mux2x1.v {1 {vlog -work work C:/GitHub/HDLGenius/src/mux2x1.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module Counter_time
+-- Compiling module mux2x1
 
 Top level modules:
-	Counter_time
+	mux2x1
 
 } {} {}} C:/GitHub/HDLGenius/src/controle.v {1 {vlog -work work C:/GitHub/HDLGenius/src/controle.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -26,12 +19,12 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	controle
 
-} {} {}} C:/GitHub/HDLGenius/src/top.v {1 {vlog -work work C:/GitHub/HDLGenius/src/top.v
+} {} {}} C:/GitHub/HDLGenius/src/Counter_time.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter_time.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module top
+-- Compiling module Counter_time
 
 Top level modules:
-	top
+	Counter_time
 
 } {} {}} C:/GitHub/HDLGenius/src/datapath.v {1 {vlog -work work C:/GitHub/HDLGenius/src/datapath.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -39,6 +32,13 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	datapath
+
+} {} {}} C:/GitHub/HDLGenius/src/top.v {1 {vlog -work work C:/GitHub/HDLGenius/src/top.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module top
+
+Top level modules:
+	top
 
 } {} {}} C:/GitHub/HDLGenius/src/top_tb.v {1 {vlog -work work C:/GitHub/HDLGenius/src/top_tb.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
