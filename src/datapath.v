@@ -198,4 +198,23 @@ Counter_FPGA U03 (
 	.SEQFPGA()
 );
 
+wire w_c025, w_05, w_c1, w_c2;
+FSM_clock fsm_c (
+	.reset(R1),
+	.CLOCK_50(CLOCK_50),
+	.C025Hz(w_c025),
+	.C05Hz(w_c05),
+	.C1Hz(w_c1),
+	.C2Hz(w_c2)
+);
+
+wire CLKHZ;
+mux4x1_1bit(
+	.level(),
+	.CL1(w_c025),
+	.CL2(w_c05),
+	.CL3(w_c1),
+	.CL4(w_c2),
+	.CLKHZ(CLKHZ)
+);
 endmodule

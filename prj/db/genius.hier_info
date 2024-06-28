@@ -69,7 +69,7 @@ HEX5[6] <= datapath:u00.hex5
 
 
 |top|datapath:u00
-CLOCK_50 => CLOCK_50.IN3
+CLOCK_50 => CLOCK_50.IN4
 KEY[0] => ~NO_FANOUT~
 KEY[1] => ~NO_FANOUT~
 KEY[2] => ~NO_FANOUT~
@@ -82,7 +82,7 @@ SWITCH[4] => ~NO_FANOUT~
 SWITCH[5] => ~NO_FANOUT~
 SWITCH[6] => ~NO_FANOUT~
 SWITCH[7] => ~NO_FANOUT~
-R1 => R1.IN1
+R1 => R1.IN2
 R2 => R2.IN2
 E1 => ~NO_FANOUT~
 E2 => E2.IN1
@@ -354,6 +354,25 @@ SEQFPGA[0] <= SEQFPGA[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[1] <= SEQFPGA[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[2] <= SEQFPGA[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[3] <= SEQFPGA[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|FSM_clock:fsm_c
+reset => ~NO_FANOUT~
+CLOCK_50 => ~NO_FANOUT~
+C025Hz <= <GND>
+C05Hz <= <GND>
+C1Hz <= <GND>
+C2Hz <= <GND>
+
+
+|top|datapath:u00|mux4x1_1bit:comb_4
+level[0] => Mux0.IN5
+level[1] => Mux0.IN4
+CL1 => Mux0.IN0
+CL2 => Mux0.IN1
+CL3 => Mux0.IN2
+CL4 => Mux0.IN3
+CLKHZ <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|controle:U01
