@@ -1,5 +1,5 @@
 Analysis & Synthesis report for genius
-Fri Jun 28 12:29:36 2024
+Sat Jun 29 20:57:16 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -21,12 +21,12 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  13. Parameter Settings for User Entity Instance: datapath:u00|Counter_time:U02
  14. Parameter Settings for User Entity Instance: datapath:u00|Counter_round:U01
  15. Parameter Settings for User Entity Instance: datapath:u00|Counter_FPGA:U03
- 16. Parameter Settings for User Entity Instance: datapath:u00|REG_User:comb_4
- 17. Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:comb_7
- 18. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:comb_8
- 19. Port Connectivity Checks: "datapath:u00|REG_setup:comb_8"
- 20. Port Connectivity Checks: "datapath:u00|REG_FPGA:comb_7"
- 21. Port Connectivity Checks: "datapath:u00|REG_User:comb_4"
+ 16. Parameter Settings for User Entity Instance: datapath:u00|REG_User:R01
+ 17. Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:R02
+ 18. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03
+ 19. Port Connectivity Checks: "datapath:u00|REG_setup:R03"
+ 20. Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"
+ 21. Port Connectivity Checks: "datapath:u00|REG_User:R01"
  22. Port Connectivity Checks: "datapath:u00|Counter_FPGA:U03"
  23. Port Connectivity Checks: "datapath:u00|Counter_round:U01"
  24. Port Connectivity Checks: "datapath:u00|Counter_time:U02"
@@ -71,7 +71,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jun 28 12:29:36 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jun 29 20:57:16 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; genius                                          ;
 ; Top-level Entity Name              ; top                                             ;
@@ -237,17 +237,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                        ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
-; |top                       ; 3 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                               ; work         ;
-;    |controle:U01|          ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|controle:U01                  ; work         ;
-;    |datapath:u00|          ; 1 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00                  ; work         ;
-;       |REG_setup:comb_8|   ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|REG_setup:comb_8 ; work         ;
-;       |dec7seg:hex4_D4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex4_D4  ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
+; |top                       ; 3 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                              ; work         ;
+;    |controle:U01|          ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|controle:U01                 ; work         ;
+;    |datapath:u00|          ; 1 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00                 ; work         ;
+;       |REG_setup:R03|      ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|REG_setup:R03   ; work         ;
+;       |dec7seg:hex4_D4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex4_D4 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -353,38 +353,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:u00|REG_User:comb_4 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 64    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|REG_User:R01 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 64    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:comb_7 ;
-+----------------+-------+--------------------------------------------------+
-; Parameter Name ; Value ; Type                                             ;
-+----------------+-------+--------------------------------------------------+
-; N              ; 64    ; Signed Integer                                   ;
-+----------------+-------+--------------------------------------------------+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:R02 ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; N              ; 64    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:u00|REG_setup:comb_8 ;
-+----------------+-------+---------------------------------------------------+
-; Parameter Name ; Value ; Type                                              ;
-+----------------+-------+---------------------------------------------------+
-; N              ; 8     ; Signed Integer                                    ;
-+----------------+-------+---------------------------------------------------+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03 ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; N              ; 8     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|REG_setup:comb_8"                                                             ;
+; Port Connectivity Checks: "datapath:u00|REG_setup:R03"                                                                ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port        ; Type   ; Severity ; Details                                                                             ;
 +-------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -393,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|REG_FPGA:comb_7"                                                                                                                       ;
+; Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"                                                                                                                          ;
 +---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                                                                                          ;
 +---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -404,7 +404,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|REG_User:comb_4"                                                          ;
+; Port Connectivity Checks: "datapath:u00|REG_User:R01"                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 ; Port    ; Type   ; Severity ; Details                                                                             ;
 +---------+--------+----------+-------------------------------------------------------------------------------------+
@@ -606,7 +606,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Jun 28 12:29:35 2024
+    Info: Processing started: Sat Jun 29 20:57:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off genius -c genius
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/top.v
@@ -645,9 +645,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file /github
     Info (12023): Found entity 1: mux4x1_1bit
 Warning (10236): Verilog HDL Implicit Net warning at top.v(40): created implicit net for "w_sel"
 Warning (10236): Verilog HDL Implicit Net warning at datapath.v(240): created implicit net for "w_c05"
-Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(212): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(225): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(233): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(253): instance has no name
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10034): Output port "LEDR[5..0]" at top.v(23) has no driver
@@ -672,11 +669,11 @@ Info (10041): Inferred latch for "SEQFPGA[0]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[1]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[2]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[3]" at Counter_FPGA.v(17)
-Info (12128): Elaborating entity "REG_User" for hierarchy "datapath:u00|REG_User:comb_4"
-Info (12128): Elaborating entity "REG_FPGA" for hierarchy "datapath:u00|REG_FPGA:comb_7"
+Info (12128): Elaborating entity "REG_User" for hierarchy "datapath:u00|REG_User:R01"
+Info (12128): Elaborating entity "REG_FPGA" for hierarchy "datapath:u00|REG_FPGA:R02"
 Critical Warning (10237): Verilog HDL warning at REG_FPGA.v(33): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
 Warning (10034): Output port "q3" at REG_FPGA.v(16) has no driver
-Info (12128): Elaborating entity "REG_setup" for hierarchy "datapath:u00|REG_setup:comb_8"
+Info (12128): Elaborating entity "REG_setup" for hierarchy "datapath:u00|REG_setup:R03"
 Info (12128): Elaborating entity "FSM_clock" for hierarchy "datapath:u00|FSM_clock:fsm_c"
 Warning (10230): Verilog HDL assignment warning at FSM_clock.v(27): truncated value with size 32 to match size of target (28)
 Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(18): inferring latch(es) for variable "C025Hz", which holds its previous value in one or more paths through the always construct
@@ -690,7 +687,7 @@ Info (10041): Inferred latch for "C05Hz" at FSM_clock.v(78)
 Info (10041): Inferred latch for "C1Hz" at FSM_clock.v(58)
 Info (10041): Inferred latch for "C2Hz" at FSM_clock.v(38)
 Info (10041): Inferred latch for "C025Hz" at FSM_clock.v(18)
-Info (12128): Elaborating entity "mux4x1_1bit" for hierarchy "datapath:u00|mux4x1_1bit:comb_9"
+Info (12128): Elaborating entity "mux4x1_1bit" for hierarchy "datapath:u00|mux4x1_1bit:comb_6"
 Info (12128): Elaborating entity "controle" for hierarchy "controle:U01"
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_win" is missing source, defaulting to GND
@@ -795,10 +792,10 @@ Info (21057): Implemented 72 device resources after synthesis - the final resour
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 122 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 119 warnings
     Info: Peak virtual memory: 4588 megabytes
-    Info: Processing ended: Fri Jun 28 12:29:36 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Jun 29 20:57:16 2024
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:01
 
 

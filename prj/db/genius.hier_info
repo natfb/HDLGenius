@@ -140,7 +140,7 @@ end_User <= <GND>
 end_time <= <GND>
 win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
-SEQFPGA <= REG_FPGA:comb_7.data
+SEQFPGA <= REG_FPGA:R02.data
 
 
 |top|datapath:u00|mux2x1:Uhex05
@@ -356,7 +356,7 @@ SEQFPGA[2] <= SEQFPGA[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[3] <= SEQFPGA[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|datapath:u00|REG_User:comb_4
+|top|datapath:u00|REG_User:R01
 CLK => q[0]~reg0.CLK
 CLK => q[1]~reg0.CLK
 CLK => q[2]~reg0.CLK
@@ -679,7 +679,7 @@ q[62] <= q[62]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[63] <= q[63]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|top|datapath:u00|REG_FPGA:comb_7
+|top|datapath:u00|REG_FPGA:R02
 CLK => q[0]~reg0.CLK
 CLK => q[1]~reg0.CLK
 CLK => q[2]~reg0.CLK
@@ -1006,7 +1006,7 @@ q3[2] <= <GND>
 q3[3] <= <GND>
 
 
-|top|datapath:u00|REG_setup:comb_8
+|top|datapath:u00|REG_setup:R03
 CLK => setup[0]~reg0.CLK
 CLK => setup[1]~reg0.CLK
 CLK => setup[2]~reg0.CLK
@@ -1058,7 +1058,7 @@ C1Hz <= <GND>
 C2Hz <= <GND>
 
 
-|top|datapath:u00|mux4x1_1bit:comb_9
+|top|datapath:u00|mux4x1_1bit:comb_6
 level[0] => Mux0.IN5
 level[1] => Mux0.IN4
 CL1 => Mux0.IN0

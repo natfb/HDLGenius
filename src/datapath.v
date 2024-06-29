@@ -203,7 +203,7 @@ wire reg_user_and_or, reg_user_and;
 wire [3:0] NBTN;
 wire [63:0] OUT_User;
 
-REG_User(
+REG_User R01(
 	.CLK(CLOCK_50),
 	.R(R2),
 	.E(reg_user_and),
@@ -215,7 +215,7 @@ or(reg_user_and_or, NBTN[0], NBTN[1], NBTN[2], NBTN[3]); //?
 and(reg_user_and, reg_user_and_or, E2);
 
 wire [63:0] OUT_FPGA;
-REG_FPGA(
+REG_FPGA R02(
 	.CLK(CLKHZ),
 	.R(R2),
 	.E(E3),
@@ -224,7 +224,7 @@ REG_FPGA(
 	.q3() //?
 );
 
-REG_setup(
+REG_setup R03(
 	.CLK(CLOCK_50),
 	.R(R1),
 	.E(E1),
