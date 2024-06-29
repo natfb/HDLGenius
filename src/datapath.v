@@ -243,7 +243,7 @@ FSM_clock fsm_c (
 );
 
 wire CLKHZ;
-mux4x1_1bit(
+mux4x1_1bit M01(
 	.level(SETUP[7:6]),
 	.CL1(w_c025),
 	.CL2(w_c05),

@@ -1058,7 +1058,7 @@ C1Hz <= <GND>
 C2Hz <= <GND>
 
 
-|top|datapath:u00|mux4x1_1bit:comb_6
+|top|datapath:u00|mux4x1_1bit:M01
 level[0] => Mux0.IN5
 level[1] => Mux0.IN4
 CL1 => Mux0.IN0
