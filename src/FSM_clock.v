@@ -13,7 +13,7 @@ output reg C025Hz, C05Hz, C1Hz, C2Hz;
 reg [27:0] r_C025Hz; reg [27:0] r_C05Hz; 
 reg [27:0] r_C2Hz;  reg [27:0] r_C1Hz; 
 
-//50*10^6 / 2*25 = 1.000.000
+//50*10^6 / 2*0,25 = 100.000.000
 //C025Hz
 always @(posedge CLOCK_50 or posedge reset)
 begin
@@ -25,7 +25,7 @@ begin
 	else 
 	begin
 		r_C025Hz <= r_C025Hz + 1;
-		if (C025Hz == 28'h000F423F)
+		if (C025Hz == 28'h5F5E100)
 		begin
 			r_C025Hz <= 28'h0000000;
 			C025Hz =~ r_C025Hz;
@@ -73,7 +73,7 @@ begin
 	end
 end
 
-//50*10^6 / 2*5 = 5.000.000
+//50*10^6 / 2*0,5 = 50.000.000
 //C05Hz
 always @(posedge CLOCK_50 or posedge reset)
 begin
@@ -85,7 +85,7 @@ begin
 	else 
 	begin
 		r_C05Hz <= r_C05Hz + 1;
-		if (C05Hz == 28'h000F423F)
+		if (C05Hz == 28'h2FAF080)
 		begin
 			r_C05Hz <= 28'h0000000;
 			C05Hz <= ~r_C05Hz;
