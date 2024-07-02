@@ -198,6 +198,15 @@ Counter_FPGA U03 (
 	.SEQFPGA()
 );
 
+mux4x1_4bits M02 (
+	.SEL(SETUP[5:4]),
+	.ENT0(),
+	.ENT1(),
+	.ENT2(),
+	.ENT3(),
+	.saida(SEQFPGA)
+);
+
 //registradores
 wire reg_user_and_or, reg_user_and; 
 wire [3:0] NBTN;

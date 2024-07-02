@@ -140,7 +140,7 @@ end_User <= <GND>
 end_time <= <GND>
 win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
-SEQFPGA <= REG_FPGA:R02.data
+SEQFPGA <= SEQFPGA.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex05
@@ -354,6 +354,37 @@ SEQFPGA[0] <= SEQFPGA[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[1] <= SEQFPGA[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[2] <= SEQFPGA[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[3] <= SEQFPGA[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|mux4x1_4bits:M02
+SEL[0] => Mux0.IN5
+SEL[0] => Mux1.IN5
+SEL[0] => Mux2.IN5
+SEL[0] => Mux3.IN5
+SEL[1] => Mux0.IN4
+SEL[1] => Mux1.IN4
+SEL[1] => Mux2.IN4
+SEL[1] => Mux3.IN4
+ENT0[0] => Mux3.IN0
+ENT0[1] => Mux2.IN0
+ENT0[2] => Mux1.IN0
+ENT0[3] => Mux0.IN0
+ENT1[0] => Mux3.IN1
+ENT1[1] => Mux2.IN1
+ENT1[2] => Mux1.IN1
+ENT1[3] => Mux0.IN1
+ENT2[0] => Mux3.IN2
+ENT2[1] => Mux2.IN2
+ENT2[2] => Mux1.IN2
+ENT2[3] => Mux0.IN2
+ENT3[0] => Mux3.IN3
+ENT3[1] => Mux2.IN3
+ENT3[2] => Mux1.IN3
+ENT3[3] => Mux0.IN3
+saida[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|REG_User:R01
