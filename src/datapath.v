@@ -42,6 +42,7 @@ output wire end_FPGA, end_User, end_time, win, match, SEQFPGA;
 //button sync
 wire [3:0] NBTN;
 wire button0, button1, button2, button3;
+
 ButtonSync(
 	.KEY0(KEY[0]), .KEY1(KEY[1]), .KEY2(KEY[2]), .KEY3(KEY[3]), .CLK(CLOCK_50),
 	.BTN0(button0), .BTN1(button1), .BTN2(button2), .BTN3(button3)
@@ -221,12 +222,14 @@ wire or_and_counter_user, and_counter_user;
 or(or_and_counter_user, NBTN[0], NBTN[1], NBTN[2], NBTN[3]);
 and(and_counter_user, or_and_counter_user, E2);
 
+
+wire w_seq1, w_seq2, w_seq3, w_seq4;
 mux4x1_4bits M02 (
 	.SEL(SETUP[5:4]),
-	.ENT0(),
-	.ENT1(),
-	.ENT2(),
-	.ENT3(),
+	.ENT0(w_seq1),
+	.ENT1(w_seq2),
+	.ENT2(w_seq3),
+	.ENT3(w_seq4),
 	.saida(SEQFPGA)
 );
 
@@ -290,8 +293,6 @@ assign match = ((OUT_FPGA == OUT_User) & END_User) ? 1'b1 : 1'b0;
 
 //leds
 wire out_key;
-nor(out_key, KEY[3:0]);
-
-
+nor (out_key, KEY[3:0]);
 
 endmodule
