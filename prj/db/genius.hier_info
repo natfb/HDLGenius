@@ -69,11 +69,11 @@ HEX5[6] <= datapath:u00.hex5
 
 
 |top|datapath:u00
-CLOCK_50 => CLOCK_50.IN6
-KEY[0] => ~NO_FANOUT~
-KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN8
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
+KEY[2] => KEY[2].IN1
+KEY[3] => KEY[3].IN1
 SWITCH[0] => SWITCH[0].IN1
 SWITCH[1] => SWITCH[1].IN1
 SWITCH[2] => SWITCH[2].IN1
@@ -83,7 +83,7 @@ SWITCH[5] => SWITCH[5].IN1
 SWITCH[6] => SWITCH[6].IN1
 SWITCH[7] => SWITCH[7].IN1
 R1 => R1.IN3
-R2 => R2.IN4
+R2 => R2.IN5
 E1 => E1.IN1
 E2 => E2.IN1
 E3 => E3.IN2
@@ -136,11 +136,34 @@ leds[1] <= <GND>
 leds[2] <= <GND>
 leds[3] <= <GND>
 end_FPGA <= <GND>
-end_User <= <GND>
+end_User <= Counter_User:U04.tc
 end_time <= <GND>
 win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
 SEQFPGA <= SEQFPGA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|ButtonSync:comb_3
+KEY0 => btn0state.EsperaApertar.DATAIN
+KEY0 => btn0next.SaidaAtiva.DATAB
+KEY0 => Selector0.IN1
+KEY1 => btn1state.EsperaApertar.DATAIN
+KEY1 => btn1next.SaidaAtiva.DATAB
+KEY1 => Selector1.IN1
+KEY2 => btn2state.EsperaApertar.DATAIN
+KEY2 => btn2next.SaidaAtiva.DATAB
+KEY2 => Selector2.IN1
+KEY3 => btn3state.EsperaApertar.DATAIN
+KEY3 => btn3next.SaidaAtiva.DATAB
+KEY3 => Selector3.IN1
+CLK => btn3state~1.DATAIN
+CLK => btn2state~1.DATAIN
+CLK => btn1state~1.DATAIN
+CLK => btn0state~1.DATAIN
+BTN0 <= BTN0.DB_MAX_OUTPUT_PORT_TYPE
+BTN1 <= BTN1.DB_MAX_OUTPUT_PORT_TYPE
+BTN2 <= BTN2.DB_MAX_OUTPUT_PORT_TYPE
+BTN3 <= BTN3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex05
@@ -354,6 +377,33 @@ SEQFPGA[0] <= SEQFPGA[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[1] <= SEQFPGA[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[2] <= SEQFPGA[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 SEQFPGA[3] <= SEQFPGA[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|Counter_User:U04
+data[0] => Equal0.IN3
+data[1] => Equal0.IN2
+data[2] => Equal0.IN1
+data[3] => Equal0.IN0
+clk => tc~reg0.CLK
+clk => ROUND[0]~reg0.CLK
+clk => ROUND[1]~reg0.CLK
+clk => ROUND[2]~reg0.CLK
+clk => ROUND[3]~reg0.CLK
+R => tc~reg0.ACLR
+R => ROUND[0]~reg0.ACLR
+R => ROUND[1]~reg0.ACLR
+R => ROUND[2]~reg0.ACLR
+R => ROUND[3]~reg0.ACLR
+E => tc~reg0.ENA
+E => ROUND[3]~reg0.ENA
+E => ROUND[2]~reg0.ENA
+E => ROUND[1]~reg0.ENA
+E => ROUND[0]~reg0.ENA
+tc <= tc~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[0] <= ROUND[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[1] <= ROUND[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[2] <= ROUND[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+ROUND[3] <= ROUND[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux4x1_4bits:M02

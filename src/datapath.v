@@ -39,6 +39,17 @@ output wire [p_hex - 1:0] hex0, hex1, hex2, hex3, hex4, hex5;
 output wire end_FPGA, end_User, end_time, win, match, SEQFPGA;
 
 /////////////////////////////////////////////////////////////////////
+//button sync
+wire [3:0] NBTN;
+wire button0, button1, button2, button3;
+ButtonSync(
+	.KEY0(KEY[0]), .KEY1(KEY[1]), .KEY2(KEY[2]), .KEY3(KEY[3]), .CLK(CLOCK_50),
+	.BTN0(button0), .BTN1(button1), .BTN2(button2), .BTN3(button3)
+);
+
+nor (NBTN, button0, button1, button2, button3);
+
+/////////////////////////////////////////////////////////////////////
 //A=1//
 //B=0//
 
@@ -198,6 +209,18 @@ Counter_FPGA U03 (
 	.SEQFPGA()
 );
 
+Counter_User U04 (
+	.data(ROUND[3:0]),
+	.clk(CLOCK_50),
+	.R(R2),
+	.E(and_counter_user),
+	.tc(end_User),
+);
+
+wire or_and_counter_user, and_counter_user;
+or(or_and_counter_user, NBTN[0], NBTN[1], NBTN[2], NBTN[3]);
+and(and_counter_user, or_and_counter_user, E2);
+
 mux4x1_4bits M02 (
 	.SEL(SETUP[5:4]),
 	.ENT0(),
@@ -209,7 +232,7 @@ mux4x1_4bits M02 (
 
 //registradores
 wire reg_user_and_or, reg_user_and; 
-wire [3:0] NBTN;
+
 wire [63:0] OUT_User;
 
 REG_User R01(
@@ -260,5 +283,15 @@ mux4x1_1bit M01(
 	.CL4(w_c2),
 	.CLKHZ(CLKHZ)
 );
+
+//COMP
+wire END_User;
+assign match = ((OUT_FPGA == OUT_User) & END_User) ? 1'b1 : 1'b0;
+
+//leds
+wire out_key;
+nor(out_key, KEY[3:0]);
+
+
 
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for genius
-Mon Jul 01 21:06:29 2024
+Thu Jul 04 19:27:59 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,38 +14,45 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |top|controle:U01|state
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Parameter Settings for User Entity Instance: datapath:u00
- 13. Parameter Settings for User Entity Instance: datapath:u00|Counter_time:U02
- 14. Parameter Settings for User Entity Instance: datapath:u00|Counter_round:U01
- 15. Parameter Settings for User Entity Instance: datapath:u00|Counter_FPGA:U03
- 16. Parameter Settings for User Entity Instance: datapath:u00|REG_User:R01
- 17. Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:R02
- 18. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03
- 19. Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"
- 20. Port Connectivity Checks: "datapath:u00|REG_User:R01"
- 21. Port Connectivity Checks: "datapath:u00|mux4x1_4bits:M02"
- 22. Port Connectivity Checks: "datapath:u00|Counter_FPGA:U03"
- 23. Port Connectivity Checks: "datapath:u00|Counter_round:U01"
- 24. Port Connectivity Checks: "datapath:u00|Counter_time:U02"
- 25. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex00"
- 26. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"
- 27. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02_1"
- 28. Port Connectivity Checks: "datapath:u00|dec7seg:hex2_D2"
- 29. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"
- 30. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"
- 31. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"
- 32. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04_1"
- 33. Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"
- 34. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"
- 35. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"
- 36. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"
- 37. Port Connectivity Checks: "datapath:u00"
- 38. Elapsed Time Per Partition
- 39. Analysis & Synthesis Messages
- 40. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn3state
+ 10. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn2state
+ 11. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn1state
+ 12. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn0state
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Parameter Settings for User Entity Instance: datapath:u00
+ 18. Parameter Settings for User Entity Instance: datapath:u00|Counter_time:U02
+ 19. Parameter Settings for User Entity Instance: datapath:u00|Counter_round:U01
+ 20. Parameter Settings for User Entity Instance: datapath:u00|Counter_FPGA:U03
+ 21. Parameter Settings for User Entity Instance: datapath:u00|Counter_User:U04
+ 22. Parameter Settings for User Entity Instance: datapath:u00|REG_User:R01
+ 23. Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:R02
+ 24. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03
+ 25. Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"
+ 26. Port Connectivity Checks: "datapath:u00|REG_User:R01"
+ 27. Port Connectivity Checks: "datapath:u00|mux4x1_4bits:M02"
+ 28. Port Connectivity Checks: "datapath:u00|Counter_User:U04"
+ 29. Port Connectivity Checks: "datapath:u00|Counter_FPGA:U03"
+ 30. Port Connectivity Checks: "datapath:u00|Counter_round:U01"
+ 31. Port Connectivity Checks: "datapath:u00|Counter_time:U02"
+ 32. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex00"
+ 33. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"
+ 34. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02_1"
+ 35. Port Connectivity Checks: "datapath:u00|dec7seg:hex2_D2"
+ 36. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"
+ 37. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"
+ 38. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"
+ 39. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04_1"
+ 40. Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"
+ 41. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"
+ 42. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"
+ 43. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"
+ 44. Port Connectivity Checks: "datapath:u00"
+ 45. Elapsed Time Per Partition
+ 46. Analysis & Synthesis Messages
+ 47. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -71,7 +78,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Jul 01 21:06:29 2024           ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 04 19:27:58 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; genius                                          ;
 ; Top-level Entity Name              ; top                                             ;
@@ -191,6 +198,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
 +----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; ../src/ButtonSync.v              ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/ButtonSync.v     ;         ;
 ; ../src/top.v                     ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/top.v            ;         ;
 ; ../src/REG_User.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_User.v       ;         ;
 ; ../src/REG_FPGA.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_FPGA.v       ;         ;
@@ -205,6 +213,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ../src/Counter_FPGA.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_FPGA.v   ;         ;
 ; ../src/mux4x1_1bit.v             ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux4x1_1bit.v    ;         ;
 ; ../src/mux4x1_4bits.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux4x1_4bits.v   ;         ;
+; ../src/Counter_User.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_User.v   ;         ;
 +----------------------------------+-----------------+------------------------+------------------------------------------+---------+
 
 
@@ -268,31 +277,86 @@ Encoding Type:  One-Hot
 +------------------+--------------+------------------+-------------+-----------------+-----------------+-------------+------------+
 
 
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; controle:U01|state.Check              ; Lost fanout                            ;
-; controle:U01|state.Next_Round         ; Lost fanout                            ;
-; controle:U01|state~2                  ; Lost fanout                            ;
-; controle:U01|state~3                  ; Lost fanout                            ;
-; controle:U01|state~4                  ; Lost fanout                            ;
-; controle:U01|state.Play_FPGA          ; Lost fanout                            ;
-; controle:U01|state.Play_User          ; Lost fanout                            ;
-; controle:U01|state.Result             ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 8 ;                                        ;
-+---------------------------------------+----------------------------------------+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn3state                                     ;
++-------------------------+-------------------------+------------------------+----------------------+
+; Name                    ; btn3state.EsperaApertar ; btn3state.EsperaSoltar ; btn3state.SaidaAtiva ;
++-------------------------+-------------------------+------------------------+----------------------+
+; btn3state.EsperaApertar ; 0                       ; 0                      ; 0                    ;
+; btn3state.SaidaAtiva    ; 1                       ; 0                      ; 1                    ;
+; btn3state.EsperaSoltar  ; 1                       ; 1                      ; 0                    ;
++-------------------------+-------------------------+------------------------+----------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                        ;
-+----------------------+--------------------+----------------------------------------+
-; Register name        ; Reason for Removal ; Registers Removed due to This Register ;
-+----------------------+--------------------+----------------------------------------+
-; controle:U01|state~2 ; Lost Fanouts       ; controle:U01|state.Play_User           ;
-; controle:U01|state~3 ; Lost Fanouts       ; controle:U01|state.Play_FPGA           ;
-+----------------------+--------------------+----------------------------------------+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn2state                                     ;
++-------------------------+-------------------------+------------------------+----------------------+
+; Name                    ; btn2state.EsperaApertar ; btn2state.EsperaSoltar ; btn2state.SaidaAtiva ;
++-------------------------+-------------------------+------------------------+----------------------+
+; btn2state.EsperaApertar ; 0                       ; 0                      ; 0                    ;
+; btn2state.SaidaAtiva    ; 1                       ; 0                      ; 1                    ;
+; btn2state.EsperaSoltar  ; 1                       ; 1                      ; 0                    ;
++-------------------------+-------------------------+------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn1state                                     ;
++-------------------------+-------------------------+------------------------+----------------------+
+; Name                    ; btn1state.EsperaApertar ; btn1state.EsperaSoltar ; btn1state.SaidaAtiva ;
++-------------------------+-------------------------+------------------------+----------------------+
+; btn1state.EsperaApertar ; 0                       ; 0                      ; 0                    ;
+; btn1state.SaidaAtiva    ; 1                       ; 0                      ; 1                    ;
+; btn1state.EsperaSoltar  ; 1                       ; 1                      ; 0                    ;
++-------------------------+-------------------------+------------------------+----------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn0state                                     ;
++-------------------------+-------------------------+------------------------+----------------------+
+; Name                    ; btn0state.EsperaApertar ; btn0state.EsperaSoltar ; btn0state.SaidaAtiva ;
++-------------------------+-------------------------+------------------------+----------------------+
+; btn0state.EsperaApertar ; 0                       ; 0                      ; 0                    ;
+; btn0state.SaidaAtiva    ; 1                       ; 0                      ; 1                    ;
+; btn0state.EsperaSoltar  ; 1                       ; 1                      ; 0                    ;
++-------------------------+-------------------------+------------------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++-------------------------------------------------------+---------------------------------------------+
+; Register name                                         ; Reason for Removal                          ;
++-------------------------------------------------------+---------------------------------------------+
+; datapath:u00|ButtonSync:comb_3|btn3state.EsperaSoltar ; Lost fanout                                 ;
+; datapath:u00|ButtonSync:comb_3|btn2state.EsperaSoltar ; Lost fanout                                 ;
+; datapath:u00|ButtonSync:comb_3|btn1state.EsperaSoltar ; Lost fanout                                 ;
+; datapath:u00|ButtonSync:comb_3|btn0state.EsperaSoltar ; Lost fanout                                 ;
+; controle:U01|state.Next_Round                         ; Lost fanout                                 ;
+; controle:U01|state~2                                  ; Lost fanout                                 ;
+; controle:U01|state~3                                  ; Lost fanout                                 ;
+; controle:U01|state~4                                  ; Lost fanout                                 ;
+; controle:U01|state.Play_User                          ; Stuck at GND due to stuck port data_in      ;
+; controle:U01|state.Check                              ; Stuck at GND due to stuck port data_in      ;
+; datapath:u00|Counter_User:U04|tc                      ; Stuck at GND due to stuck port clock_enable ;
+; datapath:u00|Counter_User:U04|ROUND[0..3]             ; Stuck at GND due to stuck port clock_enable ;
+; controle:U01|state.Result                             ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 16                ;                                             ;
++-------------------------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                ;
++------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                          ;
++------------------------------+---------------------------+---------------------------------------------------------------------------------+
+; controle:U01|state.Play_User ; Stuck at GND              ; controle:U01|state.Check, datapath:u00|Counter_User:U04|tc,                     ;
+;                              ; due to stuck port data_in ; datapath:u00|Counter_User:U04|ROUND[3], datapath:u00|Counter_User:U04|ROUND[2], ;
+;                              ;                           ; datapath:u00|Counter_User:U04|ROUND[1], datapath:u00|Counter_User:U04|ROUND[0], ;
+;                              ;                           ; controle:U01|state.Result                                                       ;
++------------------------------+---------------------------+---------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -308,6 +372,15 @@ Encoding Type:  One-Hot
 ; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top|controle:U01|state    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-----------------------------------------------------------+
@@ -346,6 +419,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: datapath:u00|Counter_FPGA:U03 ;
++----------------+-------+---------------------------------------------------+
+; Parameter Name ; Value ; Type                                              ;
++----------------+-------+---------------------------------------------------+
+; SIZE           ; 4     ; Signed Integer                                    ;
++----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|Counter_User:U04 ;
 +----------------+-------+---------------------------------------------------+
 ; Parameter Name ; Value ; Type                                              ;
 +----------------+-------+---------------------------------------------------+
@@ -415,6 +498,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENT3  ; Input  ; Info     ; Explicitly unconnected                                                                                                   ;
 ; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
 +-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|Counter_User:U04"                                                                            ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                  ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; ROUND ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------------+
@@ -611,9 +703,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Jul 01 21:06:27 2024
+    Info: Processing started: Thu Jul 04 19:27:57 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off genius -c genius
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/buttonsync.v
+    Info (12023): Found entity 1: ButtonSync
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/top.v
     Info (12023): Found entity 1: top
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_user.v
@@ -622,6 +716,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file /github
     Info (12023): Found entity 1: REG_FPGA
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_setup.v
     Info (12023): Found entity 1: REG_setup
+Warning (10275): Verilog HDL Module Instantiation warning at datapath.v(218): ignored dangling comma in List of Port Connections
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/datapath.v
     Info (12023): Found entity 1: datapath
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/controle.v
@@ -650,16 +745,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file /github
     Info (12023): Found entity 1: mux4x1_1bit
 Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux4x1_4bits.v
     Info (12023): Found entity 1: mux4x1_4bits
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_user.v
+    Info (12023): Found entity 1: Counter_User
 Warning (10236): Verilog HDL Implicit Net warning at top.v(40): created implicit net for "w_sel"
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(249): created implicit net for "w_c05"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(272): created implicit net for "w_c05"
+Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(48): instance has no name
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10034): Output port "LEDR[5..0]" at top.v(23) has no driver
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:u00"
+Warning (10858): Verilog HDL warning at datapath.v(288): object END_User used but never assigned
+Warning (10739): Verilog HDL warning at datapath.v(50): actual bit length 4 differs from formal bit length 1
+Warning (10739): Verilog HDL warning at datapath.v(293): actual bit length 4 differs from formal bit length 1
+Warning (10030): Net "END_User" at datapath.v(288) has no driver or initial value, using a default initial value '0'
 Warning (10034): Output port "leds" at datapath.v(37) has no driver
 Warning (10034): Output port "end_FPGA" at datapath.v(39) has no driver
-Warning (10034): Output port "end_User" at datapath.v(39) has no driver
 Warning (10034): Output port "end_time" at datapath.v(39) has no driver
-Warning (10034): Output port "match" at datapath.v(39) has no driver
+Info (12128): Elaborating entity "ButtonSync" for hierarchy "datapath:u00|ButtonSync:comb_3"
 Info (12128): Elaborating entity "mux2x1" for hierarchy "datapath:u00|mux2x1:Uhex05"
 Info (12128): Elaborating entity "dec7seg" for hierarchy "datapath:u00|dec7seg:hex4_D4"
 Info (12128): Elaborating entity "Counter_time" for hierarchy "datapath:u00|Counter_time:U02"
@@ -675,6 +776,7 @@ Info (10041): Inferred latch for "SEQFPGA[0]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[1]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[2]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[3]" at Counter_FPGA.v(17)
+Info (12128): Elaborating entity "Counter_User" for hierarchy "datapath:u00|Counter_User:U04"
 Info (12128): Elaborating entity "mux4x1_4bits" for hierarchy "datapath:u00|mux4x1_4bits:M02"
 Info (12128): Elaborating entity "REG_User" for hierarchy "datapath:u00|REG_User:R01"
 Info (12128): Elaborating entity "REG_FPGA" for hierarchy "datapath:u00|REG_FPGA:R02"
@@ -726,7 +828,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|ROUND[2]" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|ROUND[1]" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|ROUND[0]" is missing source, defaulting to GND
-Warning (12241): 13 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND
@@ -780,28 +882,28 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[5]" is stuck at GND
     Warning (13410): Pin "HEX5[6]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 7 registers lost all their fanouts during netlist optimizations.
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/GitHub/HDLGenius/prj/output_files/genius.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "KEY[0]"
-    Warning (15610): No output dependent on input pin "KEY[1]"
-    Warning (15610): No output dependent on input pin "KEY[2]"
-    Warning (15610): No output dependent on input pin "KEY[3]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[4]"
     Warning (15610): No output dependent on input pin "SW[5]"
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
+    Warning (15610): No output dependent on input pin "KEY[3]"
+    Warning (15610): No output dependent on input pin "KEY[2]"
+    Warning (15610): No output dependent on input pin "KEY[1]"
+    Warning (15610): No output dependent on input pin "KEY[0]"
 Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
     Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 118 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 122 warnings
     Info: Peak virtual memory: 4588 megabytes
-    Info: Processing ended: Mon Jul 01 21:06:29 2024
+    Info: Processing ended: Thu Jul 04 19:27:59 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
