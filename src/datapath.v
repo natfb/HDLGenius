@@ -179,17 +179,15 @@ dec7seg hex0_D1(
     .seg_o(w_hex0_dec)
 );
 
-////////////////////////////////////////////////////////////////////
+wire [p_counter_tempo-1:0] w_TEMPO; //?? já existe um wire TIME sendo usado em dec7seg 
+wire w_end_time; //?? já tem um wire end_time
 
-wire [p_counter_tempo-1:0] w_TEMPO;
-wire w_end_time;
-
-Counter_time U02 (    //data?
+Counter_time U02 (    
 	 .CLKT(CLOCK_50), //? CLOCK_1Hz
 	 .R(R2), 
 	 .E(E2), 
-	 .TEMPO(),
-	 .end_time()
+	 .TEMPO(TIME),
+	 .end_time(end_time)
 );
 
 Counter_round U01(
@@ -197,8 +195,8 @@ Counter_round U01(
 	.clk(CLOCK_50), // CLOCK_50
 	.R(R1),
 	.E(E4),
-	.win(),
-	.ROUND()
+	.win(win),
+	.ROUND(ROUND)
 );
 
 Counter_FPGA U03 (
@@ -206,8 +204,8 @@ Counter_FPGA U03 (
 	.clk(CLOCK_50), // CLOCK_50
 	.R(R2),
 	.E(E3),
-	.end_FPGA(),
-	.SEQFPGA()
+	.end_FPGA(end_FPGA),
+	.SEQFPGA(SEQFPGA_seq)
 );
 
 Counter_User U04 (
@@ -218,19 +216,44 @@ Counter_User U04 (
 	.tc(end_User),
 );
 
+//SEQ
+
+wire [3:0] SEQFPGA_seq;
+
+seq_00 US00 (
+	.address(SEQFPGA_seq),
+	.saida(w_seq1)
+);
+
+seq_01 US01 (
+	.address(SEQFPGA_seq),
+	.saida(w_seq2)
+);
+
+seq_02 US02 (
+	.address(SEQFPGA_seq),
+	.saida(w_seq3)
+);
+
+seq_03 US03 (
+	.address(SEQFPGA_seq),
+	.saida(w_seq4)
+);
+
+
 wire or_and_counter_user, and_counter_user;
 or(or_and_counter_user, NBTN[0], NBTN[1], NBTN[2], NBTN[3]);
 and(and_counter_user, or_and_counter_user, E2);
 
 
-wire w_seq1, w_seq2, w_seq3, w_seq4;
+wire w_seq1, w_seq2, w_seq3, w_seq4; //? nao deveria ser [3:0]
 mux4x1_4bits M02 (
 	.SEL(SETUP[5:4]),
 	.ENT0(w_seq1),
 	.ENT1(w_seq2),
 	.ENT2(w_seq3),
 	.ENT3(w_seq4),
-	.saida(SEQFPGA)
+	.saida(SEQFPGA) //? SEQFPGA deveria ter 4bits [3:0]
 );
 
 //registradores
@@ -286,6 +309,15 @@ mux4x1_1bit M01(
 	.CL4(w_c2),
 	.CLKHZ(CLKHZ)
 );
+
+//logica
+logica UL1(
+	.REG_SetupLEVEL (SETUP[7:6]),
+	.ROUND (ROUND), 
+	.REG_SetupMAPA (SETUP[5:4]),
+	.POINTS (POINTS)
+);
+
 
 //COMP
 wire END_User;

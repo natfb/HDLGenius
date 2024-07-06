@@ -135,9 +135,9 @@ leds[0] <= <GND>
 leds[1] <= <GND>
 leds[2] <= <GND>
 leds[3] <= <GND>
-end_FPGA <= <GND>
+end_FPGA <= Counter_FPGA:U03.end_FPGA
 end_User <= Counter_User:U04.tc
-end_time <= <GND>
+end_time <= Counter_time:U02.end_time
 win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
 SEQFPGA <= SEQFPGA.DB_MAX_OUTPUT_PORT_TYPE
@@ -404,6 +404,55 @@ ROUND[0] <= ROUND[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ROUND[1] <= ROUND[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ROUND[2] <= ROUND[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ROUND[3] <= ROUND[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|seq_00:US00
+address[0] => ~NO_FANOUT~
+address[1] => ~NO_FANOUT~
+address[2] => ~NO_FANOUT~
+address[3] => ~NO_FANOUT~
+saida[0] <= <VCC>
+saida[1] <= <GND>
+saida[2] <= <GND>
+saida[3] <= <GND>
+
+
+|top|datapath:u00|seq_01:US01
+address[0] => Decoder0.IN2
+address[0] => Decoder1.IN3
+address[1] => Decoder0.IN1
+address[1] => Decoder1.IN2
+address[2] => Decoder0.IN0
+address[2] => Decoder1.IN1
+address[3] => Decoder1.IN0
+saida[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|seq_02:US02
+address[0] => Decoder0.IN3
+address[1] => Decoder0.IN2
+address[2] => Decoder0.IN1
+address[3] => Decoder0.IN0
+saida[0] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|seq_03:US03
+address[0] => Decoder0.IN3
+address[0] => Decoder1.IN1
+address[1] => Decoder0.IN2
+address[1] => Decoder1.IN0
+address[2] => Decoder0.IN1
+address[3] => Decoder0.IN0
+saida[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux4x1_4bits:M02
@@ -1147,6 +1196,49 @@ CL2 => Mux0.IN1
 CL3 => Mux0.IN2
 CL4 => Mux0.IN3
 CLKHZ <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|datapath:u00|logica:UL1
+REG_SetupLEVEL[0] => Mux0.IN4
+REG_SetupLEVEL[0] => Mux1.IN3
+REG_SetupLEVEL[0] => Mux2.IN2
+REG_SetupLEVEL[0] => Mux3.IN2
+REG_SetupLEVEL[0] => Mux4.IN3
+REG_SetupLEVEL[0] => POINTS.OUTPUTSELECT
+REG_SetupLEVEL[1] => Mux0.IN3
+REG_SetupLEVEL[1] => Mux1.IN2
+REG_SetupLEVEL[1] => Mux2.IN1
+REG_SetupLEVEL[1] => Mux3.IN1
+REG_SetupLEVEL[1] => Mux4.IN2
+ROUND[0] => Add0.IN8
+ROUND[0] => Mux3.IN5
+ROUND[0] => Mux4.IN5
+ROUND[0] => POINTS.DATAA
+ROUND[1] => Add0.IN6
+ROUND[1] => Add0.IN7
+ROUND[1] => Mux2.IN5
+ROUND[1] => Mux3.IN4
+ROUND[1] => Mux4.IN4
+ROUND[2] => Add0.IN4
+ROUND[2] => Add0.IN5
+ROUND[2] => Mux1.IN5
+ROUND[2] => Mux2.IN4
+ROUND[2] => Mux3.IN3
+ROUND[3] => Add0.IN2
+ROUND[3] => Add0.IN3
+ROUND[3] => Mux0.IN5
+ROUND[3] => Mux1.IN4
+ROUND[3] => Mux2.IN3
+REG_SetupMAPA[0] => ~NO_FANOUT~
+REG_SetupMAPA[1] => ~NO_FANOUT~
+POINTS[0] <= POINTS.DB_MAX_OUTPUT_PORT_TYPE
+POINTS[1] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+POINTS[2] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+POINTS[3] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+POINTS[4] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+POINTS[5] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+POINTS[6] <= <GND>
+POINTS[7] <= <GND>
 
 
 |top|controle:U01

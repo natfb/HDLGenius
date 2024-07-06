@@ -1,5 +1,5 @@
 Analysis & Synthesis report for genius
-Thu Jul 04 19:43:51 2024
+Sat Jul 06 15:05:31 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -18,8 +18,8 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  10. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn2state
  11. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn1state
  12. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn0state
- 13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
+ 13. User-Specified and Inferred Latches
+ 14. Registers Removed During Synthesis
  15. General Register Statistics
  16. Multiplexer Restructuring Statistics (Restructuring Performed)
  17. Parameter Settings for User Entity Instance: datapath:u00
@@ -27,32 +27,37 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  19. Parameter Settings for User Entity Instance: datapath:u00|Counter_round:U01
  20. Parameter Settings for User Entity Instance: datapath:u00|Counter_FPGA:U03
  21. Parameter Settings for User Entity Instance: datapath:u00|Counter_User:U04
- 22. Parameter Settings for User Entity Instance: datapath:u00|REG_User:R01
- 23. Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:R02
- 24. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03
- 25. Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"
- 26. Port Connectivity Checks: "datapath:u00|REG_User:R01"
- 27. Port Connectivity Checks: "datapath:u00|mux4x1_4bits:M02"
- 28. Port Connectivity Checks: "datapath:u00|Counter_User:U04"
- 29. Port Connectivity Checks: "datapath:u00|Counter_FPGA:U03"
- 30. Port Connectivity Checks: "datapath:u00|Counter_round:U01"
- 31. Port Connectivity Checks: "datapath:u00|Counter_time:U02"
- 32. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex00"
- 33. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"
- 34. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02_1"
- 35. Port Connectivity Checks: "datapath:u00|dec7seg:hex2_D2"
- 36. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"
- 37. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"
- 38. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"
- 39. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04_1"
- 40. Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"
- 41. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"
- 42. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"
- 43. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"
- 44. Port Connectivity Checks: "datapath:u00"
- 45. Elapsed Time Per Partition
- 46. Analysis & Synthesis Messages
- 47. Analysis & Synthesis Suppressed Messages
+ 22. Parameter Settings for User Entity Instance: datapath:u00|seq_00:US00
+ 23. Parameter Settings for User Entity Instance: datapath:u00|seq_01:US01
+ 24. Parameter Settings for User Entity Instance: datapath:u00|seq_02:US02
+ 25. Parameter Settings for User Entity Instance: datapath:u00|seq_03:US03
+ 26. Parameter Settings for User Entity Instance: datapath:u00|REG_User:R01
+ 27. Parameter Settings for User Entity Instance: datapath:u00|REG_FPGA:R02
+ 28. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03
+ 29. Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"
+ 30. Port Connectivity Checks: "datapath:u00|REG_User:R01"
+ 31. Port Connectivity Checks: "datapath:u00|mux4x1_4bits:M02"
+ 32. Port Connectivity Checks: "datapath:u00|seq_03:US03"
+ 33. Port Connectivity Checks: "datapath:u00|seq_02:US02"
+ 34. Port Connectivity Checks: "datapath:u00|seq_01:US01"
+ 35. Port Connectivity Checks: "datapath:u00|seq_00:US00"
+ 36. Port Connectivity Checks: "datapath:u00|Counter_User:U04"
+ 37. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex00"
+ 38. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"
+ 39. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02_1"
+ 40. Port Connectivity Checks: "datapath:u00|dec7seg:hex2_D2"
+ 41. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"
+ 42. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"
+ 43. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"
+ 44. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04_1"
+ 45. Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"
+ 46. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"
+ 47. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"
+ 48. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"
+ 49. Port Connectivity Checks: "datapath:u00"
+ 50. Elapsed Time Per Partition
+ 51. Analysis & Synthesis Messages
+ 52. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -78,15 +83,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jul 04 19:43:51 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sat Jul 06 15:05:31 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; genius                                          ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 5                                               ;
-;     Total combinational functions  ; 3                                               ;
-;     Dedicated logic registers      ; 4                                               ;
-; Total registers                    ; 4                                               ;
+; Total logic elements               ; 73                                              ;
+;     Total combinational functions  ; 67                                              ;
+;     Dedicated logic registers      ; 34                                              ;
+; Total registers                    ; 34                                              ;
 ; Total pins                         ; 67                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -188,33 +193,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 12     ;
+; Number detected on machine ; 8      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                           ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
-; ../src/ButtonSync.v              ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/ButtonSync.v     ;         ;
-; ../src/top.v                     ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/top.v            ;         ;
-; ../src/REG_User.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_User.v       ;         ;
-; ../src/REG_FPGA.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_FPGA.v       ;         ;
-; ../src/REG_setup.v               ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_setup.v      ;         ;
-; ../src/datapath.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/datapath.v       ;         ;
-; ../src/controle.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/controle.v       ;         ;
-; ../src/mux2x1.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux2x1.v         ;         ;
-; ../src/Counter_time.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_time.v   ;         ;
-; ../src/FSM_clock.v               ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/FSM_clock.v      ;         ;
-; ../src/dec7seg.v                 ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/dec7seg.v        ;         ;
-; ../src/Counter__round.v          ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter__round.v ;         ;
-; ../src/Counter_FPGA.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_FPGA.v   ;         ;
-; ../src/mux4x1_1bit.v             ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux4x1_1bit.v    ;         ;
-; ../src/mux4x1_4bits.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux4x1_4bits.v   ;         ;
-; ../src/Counter_User.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_User.v   ;         ;
-+----------------------------------+-----------------+------------------------+------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                           ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                             ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
+; ../src/ButtonSync.v              ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/ButtonSync.v     ;         ;
+; ../src/top.v                     ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/top.v            ;         ;
+; ../src/REG_User.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/REG_User.v       ;         ;
+; ../src/REG_FPGA.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/REG_FPGA.v       ;         ;
+; ../src/REG_setup.v               ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/REG_setup.v      ;         ;
+; ../src/datapath.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/datapath.v       ;         ;
+; ../src/controle.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/controle.v       ;         ;
+; ../src/mux2x1.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/mux2x1.v         ;         ;
+; ../src/Counter_time.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter_time.v   ;         ;
+; ../src/FSM_clock.v               ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/FSM_clock.v      ;         ;
+; ../src/dec7seg.v                 ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/dec7seg.v        ;         ;
+; ../src/Counter__round.v          ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter__round.v ;         ;
+; ../src/Counter_FPGA.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter_FPGA.v   ;         ;
+; ../src/seq_00.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_00.v         ;         ;
+; ../src/seq_01.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_01.v         ;         ;
+; ../src/seq_02.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_02.v         ;         ;
+; ../src/seq_03.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_03.v         ;         ;
+; ../src/mux4x1_1bit.v             ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/mux4x1_1bit.v    ;         ;
+; ../src/mux4x1_4bits.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/mux4x1_4bits.v   ;         ;
+; ../src/Counter_User.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter_User.v   ;         ;
+; ../src/logica.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/logica.v         ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -222,42 +232,51 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 5              ;
+; Estimated Total logic elements              ; 73             ;
 ;                                             ;                ;
-; Total combinational functions               ; 3              ;
+; Total combinational functions               ; 67             ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 1              ;
-;     -- 3 input functions                    ; 0              ;
-;     -- <=2 input functions                  ; 2              ;
+;     -- 4 input functions                    ; 38             ;
+;     -- 3 input functions                    ; 11             ;
+;     -- <=2 input functions                  ; 18             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 3              ;
+;     -- normal mode                          ; 67             ;
 ;     -- arithmetic mode                      ; 0              ;
 ;                                             ;                ;
-; Total registers                             ; 4              ;
-;     -- Dedicated logic registers            ; 4              ;
+; Total registers                             ; 34             ;
+;     -- Dedicated logic registers            ; 34             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 67             ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 4              ;
-; Total fan-out                               ; 87             ;
-; Average fan-out                             ; 0.62           ;
+; Maximum fan-out                             ; 34             ;
+; Total fan-out                               ; 394            ;
+; Average fan-out                             ; 1.68           ;
 +---------------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                       ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name               ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
-; |top                       ; 3 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                              ; work         ;
-;    |controle:U01|          ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|controle:U01                 ; work         ;
-;    |datapath:u00|          ; 1 (0)             ; 2 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00                 ; work         ;
-;       |REG_setup:R03|      ; 0 (0)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|REG_setup:R03   ; work         ;
-;       |dec7seg:hex4_D4|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex4_D4 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
+; |top                       ; 67 (0)            ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                                ; work         ;
+;    |controle:U01|          ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|controle:U01                   ; work         ;
+;    |datapath:u00|          ; 58 (2)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00                   ; work         ;
+;       |ButtonSync:comb_3|  ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|ButtonSync:comb_3 ; work         ;
+;       |Counter_FPGA:U03|   ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_FPGA:U03  ; work         ;
+;       |Counter_User:U04|   ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_User:U04  ; work         ;
+;       |Counter_round:U01|  ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_round:U01 ; work         ;
+;       |Counter_time:U02|   ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_time:U02  ; work         ;
+;       |REG_setup:R03|      ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|REG_setup:R03     ; work         ;
+;       |dec7seg:hex2_D2|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex2_D2   ; work         ;
+;       |logica:UL1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|logica:UL1        ; work         ;
+;       |mux2x1:Uhex00|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex00     ; work         ;
+;       |mux2x1:Uhex01|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex01     ; work         ;
+;       |mux2x1:Uhex04_1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex04_1   ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -325,38 +344,37 @@ Encoding Type:  One-Hot
 +-------------------------+-------------------------+------------------------+----------------------+
 
 
-+-----------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                  ;
-+-------------------------------------------------------+---------------------------------------------+
-; Register name                                         ; Reason for Removal                          ;
-+-------------------------------------------------------+---------------------------------------------+
-; datapath:u00|ButtonSync:comb_3|btn3state.EsperaSoltar ; Lost fanout                                 ;
-; datapath:u00|ButtonSync:comb_3|btn2state.EsperaSoltar ; Lost fanout                                 ;
-; datapath:u00|ButtonSync:comb_3|btn1state.EsperaSoltar ; Lost fanout                                 ;
-; datapath:u00|ButtonSync:comb_3|btn0state.EsperaSoltar ; Lost fanout                                 ;
-; controle:U01|state.Next_Round                         ; Lost fanout                                 ;
-; controle:U01|state~2                                  ; Lost fanout                                 ;
-; controle:U01|state~3                                  ; Lost fanout                                 ;
-; controle:U01|state~4                                  ; Lost fanout                                 ;
-; controle:U01|state.Play_User                          ; Stuck at GND due to stuck port data_in      ;
-; controle:U01|state.Check                              ; Stuck at GND due to stuck port data_in      ;
-; datapath:u00|Counter_User:U04|tc                      ; Stuck at GND due to stuck port clock_enable ;
-; datapath:u00|Counter_User:U04|ROUND[0..3]             ; Stuck at GND due to stuck port clock_enable ;
-; controle:U01|state.Result                             ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 16                ;                                             ;
-+-------------------------------------------------------+---------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                        ;
++----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal          ; Free of Timing Hazards ;
++----------------------------------------------------+------------------------------+------------------------+
+; datapath:u00|Counter_FPGA:U03|end_FPGA             ; controle:U01|state.Play_FPGA ; yes                    ;
+; datapath:u00|Counter_FPGA:U03|SEQFPGA[0]           ; controle:U01|state.Play_FPGA ; yes                    ;
+; datapath:u00|Counter_FPGA:U03|SEQFPGA[1]           ; controle:U01|state.Play_FPGA ; yes                    ;
+; datapath:u00|Counter_FPGA:U03|SEQFPGA[2]           ; controle:U01|state.Play_FPGA ; yes                    ;
+; datapath:u00|Counter_FPGA:U03|SEQFPGA[3]           ; controle:U01|state.Play_FPGA ; yes                    ;
+; Number of user-specified and inferred latches = 5  ;                              ;                        ;
++----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                ;
-+------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                          ;
-+------------------------------+---------------------------+---------------------------------------------------------------------------------+
-; controle:U01|state.Play_User ; Stuck at GND              ; controle:U01|state.Check, datapath:u00|Counter_User:U04|tc,                     ;
-;                              ; due to stuck port data_in ; datapath:u00|Counter_User:U04|ROUND[3], datapath:u00|Counter_User:U04|ROUND[2], ;
-;                              ;                           ; datapath:u00|Counter_User:U04|ROUND[1], datapath:u00|Counter_User:U04|ROUND[0], ;
-;                              ;                           ; controle:U01|state.Result                                                       ;
-+------------------------------+---------------------------+---------------------------------------------------------------------------------+
++----------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                         ;
++-------------------------------------------------------+--------------------+
+; Register name                                         ; Reason for Removal ;
++-------------------------------------------------------+--------------------+
+; datapath:u00|Counter_round:U01|win                    ; Lost fanout        ;
+; datapath:u00|ButtonSync:comb_3|btn3state.EsperaSoltar ; Lost fanout        ;
+; datapath:u00|ButtonSync:comb_3|btn2state.EsperaSoltar ; Lost fanout        ;
+; datapath:u00|ButtonSync:comb_3|btn1state.EsperaSoltar ; Lost fanout        ;
+; datapath:u00|ButtonSync:comb_3|btn0state.EsperaSoltar ; Lost fanout        ;
+; controle:U01|state.Next_Round                         ; Lost fanout        ;
+; controle:U01|state~2                                  ; Lost fanout        ;
+; controle:U01|state~3                                  ; Lost fanout        ;
+; controle:U01|state~4                                  ; Lost fanout        ;
+; Total Number of Removed Registers = 9                 ;                    ;
++-------------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -364,23 +382,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 4     ;
+; Total registers                              ; 34    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Clear ; 20    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Clock Enable       ; 19    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top|controle:U01|state    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |top|datapath:u00|logica:UL1|Mux2 ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |top|controle:U01|state           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------+
 
 
 +-----------------------------------------------------------+
@@ -434,6 +453,46 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+-------+---------------------------------------------------+
 ; SIZE           ; 4     ; Signed Integer                                    ;
 +----------------+-------+---------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|seq_00:US00 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|seq_01:US01 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|seq_02:US02 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:u00|seq_03:US03 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 4     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -500,6 +559,42 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|seq_03:US03"                                                                                                 ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|seq_02:US02"                                                                                                 ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|seq_01:US01"                                                                                                 ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|seq_00:US00"                                                                                                 ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                  ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
++-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
 +--------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "datapath:u00|Counter_User:U04"                                                                            ;
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -507,36 +602,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------+
 ; ROUND ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
 +-------+--------+----------+----------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|Counter_FPGA:U03" ;
-+----------+--------+----------+----------------------------+
-; Port     ; Type   ; Severity ; Details                    ;
-+----------+--------+----------+----------------------------+
-; end_FPGA ; Output ; Info     ; Explicitly unconnected     ;
-; SEQFPGA  ; Output ; Info     ; Explicitly unconnected     ;
-+----------+--------+----------+----------------------------+
-
-
-+------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|Counter_round:U01" ;
-+-------+--------+----------+--------------------------------+
-; Port  ; Type   ; Severity ; Details                        ;
-+-------+--------+----------+--------------------------------+
-; win   ; Output ; Info     ; Explicitly unconnected         ;
-; ROUND ; Output ; Info     ; Explicitly unconnected         ;
-+-------+--------+----------+--------------------------------+
-
-
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|Counter_time:U02" ;
-+----------+--------+----------+----------------------------+
-; Port     ; Type   ; Severity ; Details                    ;
-+----------+--------+----------+----------------------------+
-; TEMPO    ; Output ; Info     ; Explicitly unconnected     ;
-; end_time ; Output ; Info     ; Explicitly unconnected     ;
-+----------+--------+----------+----------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -703,63 +768,63 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Thu Jul 04 19:43:49 2024
+    Info: Processing started: Sat Jul 06 15:05:29 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off genius -c genius
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/buttonsync.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/buttonsync.v
     Info (12023): Found entity 1: ButtonSync
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/top.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/top.v
     Info (12023): Found entity 1: top
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_user.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/reg_user.v
     Info (12023): Found entity 1: REG_User
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_fpga.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/reg_fpga.v
     Info (12023): Found entity 1: REG_FPGA
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_setup.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/reg_setup.v
     Info (12023): Found entity 1: REG_setup
-Warning (10275): Verilog HDL Module Instantiation warning at datapath.v(219): ignored dangling comma in List of Port Connections
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/datapath.v
+Warning (10275): Verilog HDL Module Instantiation warning at datapath.v(217): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/datapath.v
     Info (12023): Found entity 1: datapath
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/controle.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/controle.v
     Info (12023): Found entity 1: controle
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux2x1.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/mux2x1.v
     Info (12023): Found entity 1: mux2x1
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_time.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter_time.v
     Info (12023): Found entity 1: Counter_time
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/fsm_clock.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/fsm_clock.v
     Info (12023): Found entity 1: FSM_clock
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/dec7seg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/dec7seg.v
     Info (12023): Found entity 1: dec7seg
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter__round.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter__round.v
     Info (12023): Found entity 1: Counter_round
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_fpga.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter_fpga.v
     Info (12023): Found entity 1: Counter_FPGA
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_00.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_00.v
     Info (12023): Found entity 1: seq_00
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_01.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_01.v
     Info (12023): Found entity 1: seq_01
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_02.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_02.v
     Info (12023): Found entity 1: seq_02
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_03.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_03.v
     Info (12023): Found entity 1: seq_03
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux4x1_1bit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/mux4x1_1bit.v
     Info (12023): Found entity 1: mux4x1_1bit
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux4x1_4bits.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/mux4x1_4bits.v
     Info (12023): Found entity 1: mux4x1_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_user.v
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter_user.v
     Info (12023): Found entity 1: Counter_User
+Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/logica.v
+    Info (12023): Found entity 1: logica
 Warning (10236): Verilog HDL Implicit Net warning at top.v(40): created implicit net for "w_sel"
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(275): created implicit net for "w_c05"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(298): created implicit net for "w_c05"
 Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(49): instance has no name
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10034): Output port "LEDR[5..0]" at top.v(23) has no driver
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:u00"
-Warning (10858): Verilog HDL warning at datapath.v(291): object END_User used but never assigned
+Warning (10858): Verilog HDL warning at datapath.v(323): object END_User used but never assigned
 Warning (10739): Verilog HDL warning at datapath.v(51): actual bit length 4 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at datapath.v(296): actual bit length 4 differs from formal bit length 1
-Warning (10030): Net "END_User" at datapath.v(291) has no driver or initial value, using a default initial value '0'
+Warning (10739): Verilog HDL warning at datapath.v(328): actual bit length 4 differs from formal bit length 1
+Warning (10030): Net "END_User" at datapath.v(323) has no driver or initial value, using a default initial value '0'
 Warning (10034): Output port "leds" at datapath.v(37) has no driver
-Warning (10034): Output port "end_FPGA" at datapath.v(39) has no driver
-Warning (10034): Output port "end_time" at datapath.v(39) has no driver
 Info (12128): Elaborating entity "ButtonSync" for hierarchy "datapath:u00|ButtonSync:comb_3"
 Info (12128): Elaborating entity "mux2x1" for hierarchy "datapath:u00|mux2x1:Uhex05"
 Info (12128): Elaborating entity "dec7seg" for hierarchy "datapath:u00|dec7seg:hex4_D4"
@@ -777,6 +842,10 @@ Info (10041): Inferred latch for "SEQFPGA[1]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[2]" at Counter_FPGA.v(17)
 Info (10041): Inferred latch for "SEQFPGA[3]" at Counter_FPGA.v(17)
 Info (12128): Elaborating entity "Counter_User" for hierarchy "datapath:u00|Counter_User:U04"
+Info (12128): Elaborating entity "seq_00" for hierarchy "datapath:u00|seq_00:US00"
+Info (12128): Elaborating entity "seq_01" for hierarchy "datapath:u00|seq_01:US01"
+Info (12128): Elaborating entity "seq_02" for hierarchy "datapath:u00|seq_02:US02"
+Info (12128): Elaborating entity "seq_03" for hierarchy "datapath:u00|seq_03:US03"
 Info (12128): Elaborating entity "mux4x1_4bits" for hierarchy "datapath:u00|mux4x1_4bits:M02"
 Info (12128): Elaborating entity "REG_User" for hierarchy "datapath:u00|REG_User:R01"
 Info (12128): Elaborating entity "REG_FPGA" for hierarchy "datapath:u00|REG_FPGA:R02"
@@ -797,9 +866,15 @@ Info (10041): Inferred latch for "C1Hz" at FSM_clock.v(58)
 Info (10041): Inferred latch for "C2Hz" at FSM_clock.v(38)
 Info (10041): Inferred latch for "C025Hz" at FSM_clock.v(18)
 Info (12128): Elaborating entity "mux4x1_1bit" for hierarchy "datapath:u00|mux4x1_1bit:M01"
+Info (12128): Elaborating entity "logica" for hierarchy "datapath:u00|logica:UL1"
+Warning (10646): Verilog HDL Event Control warning at logica.v(15): posedge or negedge of vector "REG_SetupLEVEL" depends solely on its least-significant bit
+Warning (10646): Verilog HDL Event Control warning at logica.v(15): posedge or negedge of vector "ROUND" depends solely on its least-significant bit
+Warning (10230): Verilog HDL assignment warning at logica.v(17): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at logica.v(18): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at logica.v(19): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at logica.v(20): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "controle" for hierarchy "controle:U01"
 Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_win" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_mux2x1_hex5[6]" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_mux2x1_hex5[5]" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_mux2x1_hex5[4]" is missing source, defaulting to GND
@@ -824,11 +899,7 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_mux2x1_hex2[3]" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_mux2x1_hex2[2]" is missing source, defaulting to GND
     Warning (12110): Net "datapath:u00|w_mux2x1_hex2[1]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|ROUND[3]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|ROUND[2]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|ROUND[1]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|ROUND[0]" is missing source, defaulting to GND
-Warning (12241): 14 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 18 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND
@@ -840,21 +911,18 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[7]" is stuck at GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND
     Warning (13410): Pin "HEX0[1]" is stuck at GND
     Warning (13410): Pin "HEX0[2]" is stuck at GND
     Warning (13410): Pin "HEX0[3]" is stuck at GND
     Warning (13410): Pin "HEX0[4]" is stuck at GND
     Warning (13410): Pin "HEX0[5]" is stuck at GND
     Warning (13410): Pin "HEX0[6]" is stuck at GND
-    Warning (13410): Pin "HEX1[0]" is stuck at VCC
     Warning (13410): Pin "HEX1[1]" is stuck at GND
     Warning (13410): Pin "HEX1[2]" is stuck at GND
     Warning (13410): Pin "HEX1[3]" is stuck at GND
     Warning (13410): Pin "HEX1[4]" is stuck at GND
     Warning (13410): Pin "HEX1[5]" is stuck at GND
     Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX2[0]" is stuck at GND
     Warning (13410): Pin "HEX2[1]" is stuck at GND
     Warning (13410): Pin "HEX2[2]" is stuck at GND
     Warning (13410): Pin "HEX2[3]" is stuck at GND
@@ -874,7 +942,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX4[4]" is stuck at GND
     Warning (13410): Pin "HEX4[5]" is stuck at GND
     Warning (13410): Pin "HEX4[6]" is stuck at GND
-    Warning (13410): Pin "HEX5[0]" is stuck at GND
     Warning (13410): Pin "HEX5[1]" is stuck at GND
     Warning (13410): Pin "HEX5[2]" is stuck at GND
     Warning (13410): Pin "HEX5[3]" is stuck at GND
@@ -882,28 +949,20 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX5[5]" is stuck at GND
     Warning (13410): Pin "HEX5[6]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/GitHub/HDLGenius/prj/output_files/genius.map.smsg
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/prj/output_files/genius.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "SW[2]"
-    Warning (15610): No output dependent on input pin "SW[3]"
-    Warning (15610): No output dependent on input pin "SW[4]"
-    Warning (15610): No output dependent on input pin "SW[5]"
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-    Warning (15610): No output dependent on input pin "KEY[3]"
-    Warning (15610): No output dependent on input pin "KEY[2]"
-    Warning (15610): No output dependent on input pin "KEY[1]"
-    Warning (15610): No output dependent on input pin "KEY[0]"
-Info (21057): Implemented 72 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 5 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 122 warnings
-    Info: Peak virtual memory: 4588 megabytes
-    Info: Processing ended: Thu Jul 04 19:43:51 2024
+    Info (21061): Implemented 74 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 109 warnings
+    Info: Peak virtual memory: 4586 megabytes
+    Info: Processing ended: Sat Jul 06 15:05:31 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -911,6 +970,6 @@ Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 122 warni
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/GitHub/HDLGenius/prj/output_files/genius.map.smsg.
+The suppressed messages can be found in C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/prj/output_files/genius.map.smsg.
 
 
