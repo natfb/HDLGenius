@@ -2,4 +2,124 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'controle:U01|state.Play_FPGA'
+Slack : -2.172
+TNS   : -10.149
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -1.429
+TNS   : -18.364
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.304
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'controle:U01|state.Play_FPGA'
+Slack : 0.770
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'controle:U01|state.Play_FPGA'
+Slack : -1.278
+TNS   : -4.752
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -0.718
+TNS   : -9.728
+
+Type  : Slow 1200mV 85C Model Removal 'controle:U01|state.Play_FPGA'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 0.605
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -38.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'controle:U01|state.Play_FPGA'
+Slack : 0.397
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'controle:U01|state.Play_FPGA'
+Slack : -1.987
+TNS   : -9.319
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.187
+TNS   : -13.840
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.287
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'controle:U01|state.Play_FPGA'
+Slack : 0.693
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'controle:U01|state.Play_FPGA'
+Slack : -1.172
+TNS   : -4.421
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.537
+TNS   : -6.526
+
+Type  : Slow 1200mV 0C Model Removal 'controle:U01|state.Play_FPGA'
+Slack : 0.498
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.537
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -38.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'controle:U01|state.Play_FPGA'
+Slack : 0.455
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'controle:U01|state.Play_FPGA'
+Slack : -0.942
+TNS   : -4.300
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -0.383
+TNS   : -2.560
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'controle:U01|state.Play_FPGA'
+Slack : 0.413
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'controle:U01|state.Play_FPGA'
+Slack : -0.450
+TNS   : -1.309
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : 0.010
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.336
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'controle:U01|state.Play_FPGA'
+Slack : 0.350
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -40.089
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'controle:U01|state.Play_FPGA'
+Slack : 0.383
+TNS   : 0.000
+
 ------------------------------------------------------------

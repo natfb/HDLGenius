@@ -140,10 +140,13 @@ end_User <= Counter_User:U04.tc
 end_time <= Counter_time:U02.end_time
 win <= w_win.DB_MAX_OUTPUT_PORT_TYPE
 match <= <GND>
-SEQFPGA <= SEQFPGA.DB_MAX_OUTPUT_PORT_TYPE
+SEQFPGA[0] <= <GND>
+SEQFPGA[1] <= <GND>
+SEQFPGA[2] <= <GND>
+SEQFPGA[3] <= <GND>
 
 
-|top|datapath:u00|ButtonSync:comb_3
+|top|datapath:u00|ButtonSync:B00
 KEY0 => btn0state.EsperaApertar.DATAIN
 KEY0 => btn0next.SaidaAtiva.DATAB
 KEY0 => Selector0.IN1
@@ -167,24 +170,96 @@ BTN3 <= BTN3.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex05
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex05_1
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex04
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|dec7seg:hex4_D4
@@ -202,31 +277,127 @@ seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex04_1
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex03
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex03_1
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex02
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|dec7seg:hex2_D2
@@ -244,17 +415,65 @@ seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex02_1
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex01
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|dec7seg:hex1_D1
@@ -272,10 +491,34 @@ seg_o[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|mux2x1:Uhex00
-a_i => d_o.DATAB
-b_i => d_o.DATAA
+a_i[0] => d_o.DATAB
+a_i[1] => d_o.DATAB
+a_i[2] => d_o.DATAB
+a_i[3] => d_o.DATAB
+a_i[4] => d_o.DATAB
+a_i[5] => d_o.DATAB
+a_i[6] => d_o.DATAB
+b_i[0] => d_o.DATAA
+b_i[1] => d_o.DATAA
+b_i[2] => d_o.DATAA
+b_i[3] => d_o.DATAA
+b_i[4] => d_o.DATAA
+b_i[5] => d_o.DATAA
+b_i[6] => d_o.DATAA
 sel_i => d_o.OUTPUTSELECT
-d_o <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+sel_i => d_o.OUTPUTSELECT
+d_o[0] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[1] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[2] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[3] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[4] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[5] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
+d_o[6] <= d_o.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|dec7seg:hex0_D2
@@ -385,25 +628,25 @@ data[1] => Equal0.IN2
 data[2] => Equal0.IN1
 data[3] => Equal0.IN0
 clk => tc~reg0.CLK
-clk => ROUND[0]~reg0.CLK
-clk => ROUND[1]~reg0.CLK
-clk => ROUND[2]~reg0.CLK
-clk => ROUND[3]~reg0.CLK
+clk => SEQUSER[0]~reg0.CLK
+clk => SEQUSER[1]~reg0.CLK
+clk => SEQUSER[2]~reg0.CLK
+clk => SEQUSER[3]~reg0.CLK
 R => tc~reg0.ACLR
-R => ROUND[0]~reg0.ACLR
-R => ROUND[1]~reg0.ACLR
-R => ROUND[2]~reg0.ACLR
-R => ROUND[3]~reg0.ACLR
+R => SEQUSER[0]~reg0.ACLR
+R => SEQUSER[1]~reg0.ACLR
+R => SEQUSER[2]~reg0.ACLR
+R => SEQUSER[3]~reg0.ACLR
 E => tc~reg0.ENA
-E => ROUND[3]~reg0.ENA
-E => ROUND[2]~reg0.ENA
-E => ROUND[1]~reg0.ENA
-E => ROUND[0]~reg0.ENA
+E => SEQUSER[3]~reg0.ENA
+E => SEQUSER[2]~reg0.ENA
+E => SEQUSER[1]~reg0.ENA
+E => SEQUSER[0]~reg0.ENA
 tc <= tc~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ROUND[0] <= ROUND[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ROUND[1] <= ROUND[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ROUND[2] <= ROUND[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-ROUND[3] <= ROUND[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEQUSER[0] <= SEQUSER[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEQUSER[1] <= SEQUSER[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEQUSER[2] <= SEQUSER[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+SEQUSER[3] <= SEQUSER[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|seq_00:US00
@@ -810,6 +1053,10 @@ q[63] <= q[63]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|REG_FPGA:R02
+CLK => q3[0]~reg0.CLK
+CLK => q3[1]~reg0.CLK
+CLK => q3[2]~reg0.CLK
+CLK => q3[3]~reg0.CLK
 CLK => q[0]~reg0.CLK
 CLK => q[1]~reg0.CLK
 CLK => q[2]~reg0.CLK
@@ -874,6 +1121,10 @@ CLK => q[60]~reg0.CLK
 CLK => q[61]~reg0.CLK
 CLK => q[62]~reg0.CLK
 CLK => q[63]~reg0.CLK
+R => q3[0]~reg0.ACLR
+R => q3[1]~reg0.ACLR
+R => q3[2]~reg0.ACLR
+R => q3[3]~reg0.ACLR
 R => q[0]~reg0.ACLR
 R => q[1]~reg0.ACLR
 R => q[2]~reg0.ACLR
@@ -938,7 +1189,7 @@ R => q[60]~reg0.ACLR
 R => q[61]~reg0.ACLR
 R => q[62]~reg0.ACLR
 R => q[63]~reg0.ACLR
-E => q[0]~reg0.ENA
+E => q3[0]~reg0.ENA
 E => q[63]~reg0.ENA
 E => q[62]~reg0.ENA
 E => q[61]~reg0.ENA
@@ -1002,6 +1253,10 @@ E => q[4]~reg0.ENA
 E => q[3]~reg0.ENA
 E => q[2]~reg0.ENA
 E => q[1]~reg0.ENA
+E => q[0]~reg0.ENA
+E => q3[3]~reg0.ENA
+E => q3[2]~reg0.ENA
+E => q3[1]~reg0.ENA
 data[0] => q[0]~reg0.DATAIN
 data[1] => q[1]~reg0.DATAIN
 data[2] => q[2]~reg0.DATAIN
@@ -1062,10 +1317,14 @@ data[56] => q[56]~reg0.DATAIN
 data[57] => q[57]~reg0.DATAIN
 data[58] => q[58]~reg0.DATAIN
 data[59] => q[59]~reg0.DATAIN
+data[60] => q3[0]~reg0.DATAIN
 data[60] => q[60]~reg0.DATAIN
 data[61] => q[61]~reg0.DATAIN
+data[61] => q3[1]~reg0.DATAIN
 data[62] => q[62]~reg0.DATAIN
+data[62] => q3[2]~reg0.DATAIN
 data[63] => q[63]~reg0.DATAIN
+data[63] => q3[3]~reg0.DATAIN
 q[0] <= q[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[1] <= q[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[2] <= q[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -1130,10 +1389,10 @@ q[60] <= q[60]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[61] <= q[61]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[62] <= q[62]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q[63] <= q[63]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-q3[0] <= <GND>
-q3[1] <= <GND>
-q3[2] <= <GND>
-q3[3] <= <GND>
+q3[0] <= q3[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q3[1] <= q3[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q3[2] <= q3[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q3[3] <= q3[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top|datapath:u00|REG_setup:R03

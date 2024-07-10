@@ -1,23 +1,16 @@
-C:/GitHub/HDLGenius/src/FSM_clock.v {1 {vlog -work work C:/GitHub/HDLGenius/src/FSM_clock.v
+C:/GitHub/HDLGenius/src/Counter_FPGA.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter_FPGA.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module FSM_clock
+-- Compiling module Counter_FPGA
 
 Top level modules:
-	FSM_clock
+	Counter_FPGA
 
-} {} {}} C:/GitHub/HDLGenius/src/mux2x1.v {1 {vlog -work work C:/GitHub/HDLGenius/src/mux2x1.v
+} {} {}} C:/GitHub/HDLGenius/src/REG_setup.v {1 {vlog -work work C:/GitHub/HDLGenius/src/REG_setup.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module mux2x1
+-- Compiling module REG_setup
 
 Top level modules:
-	mux2x1
-
-} {} {}} C:/GitHub/HDLGenius/src/controle.v {1 {vlog -work work C:/GitHub/HDLGenius/src/controle.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module controle
-
-Top level modules:
-	controle
+	REG_setup
 
 } {} {}} C:/GitHub/HDLGenius/src/Counter_time.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter_time.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -26,19 +19,19 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 Top level modules:
 	Counter_time
 
-} {} {}} C:/GitHub/HDLGenius/src/datapath.v {1 {vlog -work work C:/GitHub/HDLGenius/src/datapath.v
+} {} {}} C:/GitHub/HDLGenius/src/Counter__round.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter__round.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Counter_round
+
+Top level modules:
+	Counter_round
+
+} {} {}} C:/GitHub/HDLGenius/src/datapath.v {1 {vlog -work work {C:\GitHub\HDLGenius\src\datapath.v}
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 -- Compiling module datapath
 
 Top level modules:
 	datapath
-
-} {} {}} C:/GitHub/HDLGenius/src/top.v {1 {vlog -work work C:/GitHub/HDLGenius/src/top.v
-Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
--- Compiling module top
-
-Top level modules:
-	top
 
 } {} {}} C:/GitHub/HDLGenius/src/top_tb.v {1 {vlog -work work C:/GitHub/HDLGenius/src/top_tb.v
 Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
@@ -46,5 +39,117 @@ Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
 
 Top level modules:
 	top_tb
+
+} {} {}} C:/GitHub/HDLGenius/src/seq_00.v {1 {vlog -work work C:/GitHub/HDLGenius/src/seq_00.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module seq_00
+
+Top level modules:
+	seq_00
+
+} {} {}} C:/GitHub/HDLGenius/src/seq_01.v {1 {vlog -work work C:/GitHub/HDLGenius/src/seq_01.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module seq_01
+
+Top level modules:
+	seq_01
+
+} {} {}} C:/GitHub/HDLGenius/src/ButtonSync.v {1 {vlog -work work C:/GitHub/HDLGenius/src/ButtonSync.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ButtonSync
+
+Top level modules:
+	ButtonSync
+
+} {} {}} C:/GitHub/HDLGenius/src/seq_02.v {1 {vlog -work work C:/GitHub/HDLGenius/src/seq_02.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module seq_02
+
+Top level modules:
+	seq_02
+
+} {} {}} C:/GitHub/HDLGenius/src/REG_FPGA.v {1 {vlog -work work C:/GitHub/HDLGenius/src/REG_FPGA.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module REG_FPGA
+
+Top level modules:
+	REG_FPGA
+
+} {} {}} C:/GitHub/HDLGenius/src/seq_03.v {1 {vlog -work work C:/GitHub/HDLGenius/src/seq_03.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module seq_03
+
+Top level modules:
+	seq_03
+
+} {} {}} C:/GitHub/HDLGenius/src/mux4x1_4bits.v {1 {vlog -work work C:/GitHub/HDLGenius/src/mux4x1_4bits.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux4x1_4bits
+
+Top level modules:
+	mux4x1_4bits
+
+} {} {}} C:/GitHub/HDLGenius/src/mux2x1.v {1 {vlog -work work C:/GitHub/HDLGenius/src/mux2x1.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux2x1
+
+Top level modules:
+	mux2x1
+
+} {} {}} C:/GitHub/HDLGenius/src/mux4x1_1bit.v {1 {vlog -work work C:/GitHub/HDLGenius/src/mux4x1_1bit.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mux4x1_1bit
+
+Top level modules:
+	mux4x1_1bit
+
+} {} {}} C:/GitHub/HDLGenius/src/Counter_User.v {1 {vlog -work work C:/GitHub/HDLGenius/src/Counter_User.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Counter_User
+
+Top level modules:
+	Counter_User
+
+} {} {}} C:/GitHub/HDLGenius/src/controle.v {1 {vlog -work work C:/GitHub/HDLGenius/src/controle.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module controle
+
+Top level modules:
+	controle
+
+} {} {}} C:/GitHub/HDLGenius/src/logica.v {1 {vlog -work work C:/GitHub/HDLGenius/src/logica.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module logica
+
+Top level modules:
+	logica
+
+} {} {}} C:/GitHub/HDLGenius/src/FSM_clock.v {1 {vlog -work work C:/GitHub/HDLGenius/src/FSM_clock.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module FSM_clock
+
+Top level modules:
+	FSM_clock
+
+} {} {}} C:/GitHub/HDLGenius/src/dec7seg.v {1 {vlog -work work C:/GitHub/HDLGenius/src/dec7seg.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module dec7seg
+
+Top level modules:
+	dec7seg
+
+} {} {}} C:/GitHub/HDLGenius/src/top.v {1 {vlog -work work {C:\GitHub\HDLGenius\src\top.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} C:/GitHub/HDLGenius/src/REG_User.v {1 {vlog -work work C:/GitHub/HDLGenius/src/REG_User.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module REG_User
+
+Top level modules:
+	REG_User
 
 } {} {}}

@@ -3,138 +3,430 @@ K3
 13
 cModel Technology
 Z0 dC:\altera\13.0sp1
-vcontrole
-Z1 !s100 i41Z>JmWTaR@PTY30zDJA0
-Z2 I2`J`R[`6bHIEO7T^DjTef3
-Z3 VK:jGAm`BZ9dG=TKh6Gl4o1
+vButtonSync
+Z1 !s100 Z>KEOao_zETGB5Bg@cKz[0
+Z2 IQQHn?8zQc:zg_?2fmW5MD2
+Z3 V=E0QWLD7Q<fz`2dXdUQgd3
 Z4 dC:\GitHub\HDLGenius\sim
-Z5 w1716936473
-Z6 8C:/GitHub/HDLGenius/src/controle.v
-Z7 FC:/GitHub/HDLGenius/src/controle.v
-L0 1
+Z5 w1720129373
+Z6 8C:/GitHub/HDLGenius/src/ButtonSync.v
+Z7 FC:/GitHub/HDLGenius/src/ButtonSync.v
+L0 3
 Z8 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/controle.v|
+Z9 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/ButtonSync.v|
 Z10 o-work work -O0
-Z11 !s108 1717716231.335000
-Z12 !s107 C:/GitHub/HDLGenius/src/controle.v|
+Z11 n@button@sync
+Z12 !s108 1720543327.523000
+Z13 !s107 C:/GitHub/HDLGenius/src/ButtonSync.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vcontrole
+Z14 !s100 MI2iTbk]okoXzk_^Bi3WB1
+Z15 IN4zzYTjI2U3b1JbW=K3[>1
+Z16 VK:jGAm`BZ9dG=TKh6Gl4o1
+R4
+Z17 w1720551299
+Z18 8C:/GitHub/HDLGenius/src/controle.v
+Z19 FC:/GitHub/HDLGenius/src/controle.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/controle.v|
+R10
+Z21 !s108 1720560617.442000
+Z22 !s107 C:/GitHub/HDLGenius/src/controle.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCounter_FPGA
+Z23 !s100 FCmnJmdKz1HOPNNm^53Xe0
+Z24 ISNzUJfUa`lVjM<K<fNVX@0
+Z25 V5dQ9>:2l_BAL8ghNS>gDD3
+R4
+Z26 w1719878366
+Z27 8C:/GitHub/HDLGenius/src/Counter_FPGA.v
+Z28 FC:/GitHub/HDLGenius/src/Counter_FPGA.v
+L0 1
+R8
+r1
+31
+Z29 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/Counter_FPGA.v|
+R10
+Z30 n@counter_@f@p@g@a
+Z31 !s108 1720543328.106000
+Z32 !s107 C:/GitHub/HDLGenius/src/Counter_FPGA.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCounter_round
+Z33 !s100 Ao[[zPh2cCWYQ:9^BHZ6e3
+Z34 IdOI<?0:nle`XFNHCgJMJL1
+Z35 V<D4<9SMR:<>lJjRIfeKOj2
+R4
+Z36 w1719583875
+Z37 8C:/GitHub/HDLGenius/src/Counter__round.v
+Z38 FC:/GitHub/HDLGenius/src/Counter__round.v
+L0 1
+R8
+r1
+31
+Z39 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/Counter__round.v|
+R10
+Z40 n@counter_round
+Z41 !s108 1720543327.571000
+Z42 !s107 C:/GitHub/HDLGenius/src/Counter__round.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vCounter_time
-Z13 II8gbgmE1mOZ[LRc]mV5BA3
-Z14 VD[=@dOV_97nFgWY1PVez:0
+Z43 !s100 >WjKidBZgJo1?L=PlH:B<1
+Z44 II8gbgmE1mOZ[LRc]mV5BA3
+Z45 VD[=@dOV_97nFgWY1PVez:0
 R4
-Z15 w1717716219
-Z16 8C:/GitHub/HDLGenius/src/Counter_time.v
-Z17 FC:/GitHub/HDLGenius/src/Counter_time.v
+Z46 w1717716219
+Z47 8C:/GitHub/HDLGenius/src/Counter_time.v
+Z48 FC:/GitHub/HDLGenius/src/Counter_time.v
 L0 1
 R8
 r1
 31
-Z18 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/Counter_time.v|
+Z49 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/Counter_time.v|
 R10
-Z19 n@counter_time
-Z20 !s100 >WjKidBZgJo1?L=PlH:B<1
-Z21 !s108 1717716231.415000
-Z22 !s107 C:/GitHub/HDLGenius/src/Counter_time.v|
+Z50 n@counter_time
+Z51 !s108 1720543327.272000
+Z52 !s107 C:/GitHub/HDLGenius/src/Counter_time.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCounter_User
+Z53 !s100 ]`Y<__A66kmM2XREX:Ea90
+Z54 I^K`E1Y<;TF^QA;:V;UgA`2
+Z55 VZQQ>TZkSjX;g27F@ARPaH1
+R4
+Z56 w1720469801
+Z57 8C:/GitHub/HDLGenius/src/Counter_User.v
+Z58 FC:/GitHub/HDLGenius/src/Counter_User.v
+L0 1
+R8
+r1
+31
+Z59 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/Counter_User.v|
+R10
+Z60 n@counter_@user
+Z61 !s108 1720543327.618000
+Z62 !s107 C:/GitHub/HDLGenius/src/Counter_User.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vdatapath
-Z23 !s100 gTo?I8ADQJnXXADM=NCR?1
-Z24 I0[VgjM4gdinncAQf_1e5B3
-Z25 VCPBkeDz=EODWX]OW73bCE2
+Z63 !s100 gm7:6N>269TJ:3zjjmA`20
+Z64 IXN;<TEFDJABN44F:S=?UE1
+Z65 V8fIHZXI0CNS4SQcVH=O>X2
 R4
-Z26 w1717540355
-Z27 8C:/GitHub/HDLGenius/src/datapath.v
-Z28 FC:/GitHub/HDLGenius/src/datapath.v
+Z66 w1720535409
+Z67 8C:\GitHub\HDLGenius\src\datapath.v
+Z68 FC:\GitHub\HDLGenius\src\datapath.v
 L0 1
 R8
 r1
 31
-Z29 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/datapath.v|
+Z69 !s90 -reportprogress|300|-work|work|C:\GitHub\HDLGenius\src\datapath.v|
 R10
-Z30 !s108 1717716231.478000
-Z31 !s107 C:/GitHub/HDLGenius/src/datapath.v|
+Z70 !s108 1720543327.303000
+Z71 !s107 C:\GitHub\HDLGenius\src\datapath.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vdec7seg
+Z72 !s100 R]XamaiJeR9Rn@c5I1H0N1
+Z73 I5W_z4bd9T<n^5HMj01D5G2
+Z74 V;@TYdThc;?A3D25HPX8Fa2
+R4
+Z75 w1718753724
+Z76 8C:/GitHub/HDLGenius/src/dec7seg.v
+Z77 FC:/GitHub/HDLGenius/src/dec7seg.v
+L0 1
+R8
+r1
+31
+Z78 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/dec7seg.v|
+R10
+Z79 !s108 1720543327.650000
+Z80 !s107 C:/GitHub/HDLGenius/src/dec7seg.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vFSM_clock
-Z32 !s100 8;@DeTDfO@z1BNWHz[l`?1
-Z33 Iliza=<lT<Um4d6NbkeJ[^3
-Z34 VfHLCS1ZHnA357@fb;5a[<1
+Z81 IfgEEF1MHm_26]Q5De5P_e0
+Z82 VfHLCS1ZHnA357@fb;5a[<1
 R4
-Z35 w1717714060
-Z36 8C:/GitHub/HDLGenius/src/FSM_clock.v
-Z37 FC:/GitHub/HDLGenius/src/FSM_clock.v
+Z83 w1720561705
+Z84 8C:/GitHub/HDLGenius/src/FSM_clock.v
+Z85 FC:/GitHub/HDLGenius/src/FSM_clock.v
 L0 1
 R8
 r1
 31
-Z38 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/FSM_clock.v|
+Z86 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/FSM_clock.v|
 R10
-Z39 n@f@s@m_clock
-Z40 !s108 1717716231.558000
-Z41 !s107 C:/GitHub/HDLGenius/src/FSM_clock.v|
+Z87 n@f@s@m_clock
+Z88 !s100 M_8bn6^b[lAVNO2eM:zNi0
+Z89 !s108 1720561712.252000
+Z90 !s107 C:/GitHub/HDLGenius/src/FSM_clock.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vlogica
+Z91 !s100 V:`X3hdj1M>Mz[zT3BXaX2
+Z92 I2KGaSb3Vfm62h::oeHe7F3
+Z93 V[JQ7`kD[JEh>3g_l1F@W61
+R4
+Z94 w1720455656
+Z95 8C:/GitHub/HDLGenius/src/logica.v
+Z96 FC:/GitHub/HDLGenius/src/logica.v
+L0 1
+R8
+r1
+31
+Z97 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/logica.v|
+R10
+Z98 !s108 1720543327.697000
+Z99 !s107 C:/GitHub/HDLGenius/src/logica.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vmux2x1
-Z42 !s100 VY0X1Ak5lemol0]ACPBM82
-Z43 Iie`3cKHbi7hDP5l[jSz[R0
-Z44 V_m1YR]<3_gHdkl^>6P?JP2
+Z100 !s100 LEh=aObYh1b;im>FV[XHA1
+Z101 IiWaKb5ADD5MImW5bii_FY3
+Z102 Vb7PP5nMg5l5iake@?^PNk2
 R4
-Z45 w1716936953
-Z46 8C:/GitHub/HDLGenius/src/mux2x1.v
-Z47 FC:/GitHub/HDLGenius/src/mux2x1.v
+Z103 w1720468626
+Z104 8C:/GitHub/HDLGenius/src/mux2x1.v
+Z105 FC:/GitHub/HDLGenius/src/mux2x1.v
 L0 1
 R8
 r1
 31
-Z48 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/mux2x1.v|
+Z106 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/mux2x1.v|
 R10
-Z49 !s108 1717716231.622000
-Z50 !s107 C:/GitHub/HDLGenius/src/mux2x1.v|
+Z107 !s108 1720543327.398000
+Z108 !s107 C:/GitHub/HDLGenius/src/mux2x1.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux4x1_1bit
+Z109 !s100 XXOALiRXe]84U_P?nU^`U2
+Z110 IGJJKfzo>E5gS7`?<mRelV3
+Z111 VEmWBD<nXOUU3`==F^4Ok?0
+R4
+Z112 w1719585753
+Z113 8C:/GitHub/HDLGenius/src/mux4x1_1bit.v
+Z114 FC:/GitHub/HDLGenius/src/mux4x1_1bit.v
+L0 1
+R8
+r1
+31
+Z115 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/mux4x1_1bit.v|
+R10
+Z116 !s108 1720543327.741000
+Z117 !s107 C:/GitHub/HDLGenius/src/mux4x1_1bit.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux4x1_4bits
+Z118 !s100 e_o_VZ9`e2QK0SO<62O7?0
+Z119 I6D=]IMgYISTflVeMiBdnJ3
+Z120 VRRTc4fgX3V3Q?@[d<_aYS0
+R4
+Z121 w1719878089
+Z122 8C:/GitHub/HDLGenius/src/mux4x1_4bits.v
+Z123 FC:/GitHub/HDLGenius/src/mux4x1_4bits.v
+L0 1
+R8
+r1
+31
+Z124 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/mux4x1_4bits.v|
+R10
+Z125 !s108 1720543327.776000
+Z126 !s107 C:/GitHub/HDLGenius/src/mux4x1_4bits.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vREG_FPGA
+Z127 !s100 XA`h:LoEdQl5Z>FneS@A91
+Z128 I^G@F8f0:gG_YNBXAaoSoB3
+Z129 VS=M:z0Fi1e`EIFCeEHEe`3
+R4
+Z130 w1720465310
+Z131 8C:/GitHub/HDLGenius/src/REG_FPGA.v
+Z132 FC:/GitHub/HDLGenius/src/REG_FPGA.v
+L0 1
+R8
+r1
+31
+Z133 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/REG_FPGA.v|
+R10
+Z134 n@r@e@g_@f@p@g@a
+Z135 !s108 1720543327.823000
+Z136 !s107 C:/GitHub/HDLGenius/src/REG_FPGA.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vREG_setup
+Z137 !s100 <DJWHDH]6I5R8A`mz0HF12
+Z138 IkI<WVBA0k8I40`6?Z<Cj33
+Z139 V@JS?d`]oaiJHDiAIPQ@W:3
+R4
+Z140 w1719588410
+Z141 8C:/GitHub/HDLGenius/src/REG_setup.v
+Z142 FC:/GitHub/HDLGenius/src/REG_setup.v
+L0 1
+R8
+r1
+31
+Z143 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/REG_setup.v|
+R10
+Z144 n@r@e@g_setup
+Z145 !s108 1720543327.854000
+Z146 !s107 C:/GitHub/HDLGenius/src/REG_setup.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vREG_User
+Z147 !s100 N6CU4IQ7IU1Q;^^z[[R1_0
+Z148 I[KjA7lTG6dj2lBbhSghmn3
+Z149 V?2;bc4`Q:WHWFYmX0O?Lz3
+R4
+Z150 w1719588396
+Z151 8C:/GitHub/HDLGenius/src/REG_User.v
+Z152 FC:/GitHub/HDLGenius/src/REG_User.v
+L0 1
+R8
+r1
+31
+Z153 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/REG_User.v|
+R10
+Z154 n@r@e@g_@user
+Z155 !s108 1720543327.902000
+Z156 !s107 C:/GitHub/HDLGenius/src/REG_User.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vseq_00
+Z157 !s100 iQg24=@Z0GGF68DT9=UnZ0
+Z158 Io[OzdVzi_m3Y5SClNom=H1
+Z159 VG0][ghX_;8P8F5@WJKF612
+R4
+R36
+Z160 8C:/GitHub/HDLGenius/src/seq_00.v
+Z161 FC:/GitHub/HDLGenius/src/seq_00.v
+L0 1
+R8
+r1
+31
+Z162 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/seq_00.v|
+R10
+Z163 !s108 1720543327.949000
+Z164 !s107 C:/GitHub/HDLGenius/src/seq_00.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vseq_01
+Z165 !s100 `:N2f3dZ0625lN;kI`<V62
+Z166 I@gfiPUAQI2h;zZFo5m;Z`3
+Z167 VVm6^jm71LSkF6NnOG;gCA3
+R4
+R36
+Z168 8C:/GitHub/HDLGenius/src/seq_01.v
+Z169 FC:/GitHub/HDLGenius/src/seq_01.v
+L0 1
+R8
+r1
+31
+Z170 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/seq_01.v|
+R10
+Z171 !s108 1720543327.980000
+Z172 !s107 C:/GitHub/HDLGenius/src/seq_01.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vseq_02
+Z173 !s100 gnW<J;Zf<fgJZM6bb2oBX0
+Z174 I6zDf3j>?G[>]Vz8=@]>bc1
+Z175 VlNP1BzTVPmQ[G_LT6h?lQ0
+R4
+R36
+Z176 8C:/GitHub/HDLGenius/src/seq_02.v
+Z177 FC:/GitHub/HDLGenius/src/seq_02.v
+L0 1
+R8
+r1
+31
+Z178 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/seq_02.v|
+R10
+Z179 !s108 1720543328.027000
+Z180 !s107 C:/GitHub/HDLGenius/src/seq_02.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vseq_03
+Z181 !s100 ?kO;H7Uai51>Lio0^MOe=1
+Z182 I`[:NoA^1>^1jV5EdazWW?3
+Z183 VX;z8_;lS9YGBPdl<bOego0
+R4
+R36
+Z184 8C:/GitHub/HDLGenius/src/seq_03.v
+Z185 FC:/GitHub/HDLGenius/src/seq_03.v
+L0 1
+R8
+r1
+31
+Z186 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/seq_03.v|
+R10
+Z187 !s108 1720543328.075000
+Z188 !s107 C:/GitHub/HDLGenius/src/seq_03.v|
 !i10b 1
 !s85 0
 !s101 -O0
 vtop
-Z51 !s100 :X0SjHlk5;4Wj0n7Q6zQR3
-Z52 Img=z;fXA7X6P62SaSn0GM2
-Z53 VD>aD@eAcdhzja<@bUK5ne2
+Z189 !s100 WK`FG>@aR>WZL1m;oV6^b1
+Z190 Ij=4K@CA?j=THf=E_97[L^2
+Z191 VD>aD@eAcdhzja<@bUK5ne2
 R4
-Z54 w1717713759
-Z55 8C:/GitHub/HDLGenius/src/top.v
-Z56 FC:/GitHub/HDLGenius/src/top.v
+Z192 w1718759015
+Z193 8C:\GitHub\HDLGenius\src\top.v
+Z194 FC:\GitHub\HDLGenius\src\top.v
 L0 1
 R8
 r1
 31
-Z57 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/top.v|
+Z195 !s90 -reportprogress|300|-work|work|C:\GitHub\HDLGenius\src\top.v|
 R10
+Z196 !s108 1720543327.445000
+Z197 !s107 C:\GitHub\HDLGenius\src\top.v|
 !i10b 1
 !s85 0
-Z58 !s108 1717716231.685000
-Z59 !s107 C:/GitHub/HDLGenius/src/top.v|
 !s101 -O0
 vtop_tb
 !i10b 1
-Z60 !s100 MGkgR2^AS0I1YWVHAaz3d3
-Z61 I@1ndL6;_7V>Fnj4e0;Hd63
-Z62 VN7^ihbmI9enFg9D=Qco243
+!s100 M_TAc=0^5T:dGPH:N:o@G3
+I@HJ38j1laZ<izUC?LnfAe1
+Z198 VN7^ihbmI9enFg9D=Qco243
 R4
-Z63 w1717713724
-Z64 8C:/GitHub/HDLGenius/src/top_tb.v
-Z65 FC:/GitHub/HDLGenius/src/top_tb.v
+w1720562626
+Z199 8C:/GitHub/HDLGenius/src/top_tb.v
+Z200 FC:/GitHub/HDLGenius/src/top_tb.v
 L0 3
 R8
 r1
 !s85 0
 31
-!s108 1717716231.748000
+!s108 1720562630.349000
 !s107 C:/GitHub/HDLGenius/src/top_tb.v|
-Z66 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/top_tb.v|
+Z201 !s90 -reportprogress|300|-work|work|C:/GitHub/HDLGenius/src/top_tb.v|
 !s101 -O0
 R10

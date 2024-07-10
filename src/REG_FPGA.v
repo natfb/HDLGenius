@@ -29,8 +29,10 @@ begin
 			q3 <= data[N-1:N-4];
 			end
 		else 
+			begin
 		   q <= q;
 			q3 <= q3;
+			end
 end
 
 endmodule

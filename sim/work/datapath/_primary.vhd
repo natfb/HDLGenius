@@ -30,7 +30,8 @@ entity datapath is
         end_User        : out    vl_logic;
         end_time        : out    vl_logic;
         win             : out    vl_logic;
-        match           : out    vl_logic
+        match           : out    vl_logic;
+        SEQFPGA         : out    vl_logic_vector(3 downto 0)
     );
     attribute mti_svvh_generic_type : integer;
     attribute mti_svvh_generic_type of p_key : constant is 1;

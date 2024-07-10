@@ -1,5 +1,5 @@
 Analysis & Synthesis report for genius
-Sat Jul 06 15:05:31 2024
+Tue Jul 09 19:30:31 2024
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,10 +14,10 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |top|controle:U01|state
-  9. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn3state
- 10. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn2state
- 11. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn1state
- 12. State Machine - |top|datapath:u00|ButtonSync:comb_3|btn0state
+  9. State Machine - |top|datapath:u00|ButtonSync:B00|btn3state
+ 10. State Machine - |top|datapath:u00|ButtonSync:B00|btn2state
+ 11. State Machine - |top|datapath:u00|ButtonSync:B00|btn1state
+ 12. State Machine - |top|datapath:u00|ButtonSync:B00|btn0state
  13. User-Specified and Inferred Latches
  14. Registers Removed During Synthesis
  15. General Register Statistics
@@ -36,28 +36,19 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  28. Parameter Settings for User Entity Instance: datapath:u00|REG_setup:R03
  29. Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"
  30. Port Connectivity Checks: "datapath:u00|REG_User:R01"
- 31. Port Connectivity Checks: "datapath:u00|mux4x1_4bits:M02"
- 32. Port Connectivity Checks: "datapath:u00|seq_03:US03"
- 33. Port Connectivity Checks: "datapath:u00|seq_02:US02"
- 34. Port Connectivity Checks: "datapath:u00|seq_01:US01"
- 35. Port Connectivity Checks: "datapath:u00|seq_00:US00"
- 36. Port Connectivity Checks: "datapath:u00|Counter_User:U04"
- 37. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex00"
- 38. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"
- 39. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02_1"
- 40. Port Connectivity Checks: "datapath:u00|dec7seg:hex2_D2"
- 41. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"
- 42. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"
- 43. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"
- 44. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04_1"
- 45. Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"
- 46. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"
- 47. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"
- 48. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"
- 49. Port Connectivity Checks: "datapath:u00"
- 50. Elapsed Time Per Partition
- 51. Analysis & Synthesis Messages
- 52. Analysis & Synthesis Suppressed Messages
+ 31. Port Connectivity Checks: "datapath:u00|Counter_User:U04"
+ 32. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"
+ 33. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"
+ 34. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"
+ 35. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"
+ 36. Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"
+ 37. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"
+ 38. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"
+ 39. Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"
+ 40. Port Connectivity Checks: "datapath:u00"
+ 41. Elapsed Time Per Partition
+ 42. Analysis & Synthesis Messages
+ 43. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -83,15 +74,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Jul 06 15:05:31 2024           ;
+; Analysis & Synthesis Status        ; Successful - Tue Jul 09 19:30:31 2024           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; genius                                          ;
 ; Top-level Entity Name              ; top                                             ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 73                                              ;
-;     Total combinational functions  ; 67                                              ;
-;     Dedicated logic registers      ; 34                                              ;
-; Total registers                    ; 34                                              ;
+; Total logic elements               ; 121                                             ;
+;     Total combinational functions  ; 115                                             ;
+;     Dedicated logic registers      ; 35                                              ;
+; Total registers                    ; 35                                              ;
 ; Total pins                         ; 67                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -193,38 +184,38 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 8      ;
+; Number detected on machine ; 12     ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                           ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
-; ../src/ButtonSync.v              ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/ButtonSync.v     ;         ;
-; ../src/top.v                     ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/top.v            ;         ;
-; ../src/REG_User.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/REG_User.v       ;         ;
-; ../src/REG_FPGA.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/REG_FPGA.v       ;         ;
-; ../src/REG_setup.v               ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/REG_setup.v      ;         ;
-; ../src/datapath.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/datapath.v       ;         ;
-; ../src/controle.v                ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/controle.v       ;         ;
-; ../src/mux2x1.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/mux2x1.v         ;         ;
-; ../src/Counter_time.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter_time.v   ;         ;
-; ../src/FSM_clock.v               ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/FSM_clock.v      ;         ;
-; ../src/dec7seg.v                 ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/dec7seg.v        ;         ;
-; ../src/Counter__round.v          ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter__round.v ;         ;
-; ../src/Counter_FPGA.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter_FPGA.v   ;         ;
-; ../src/seq_00.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_00.v         ;         ;
-; ../src/seq_01.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_01.v         ;         ;
-; ../src/seq_02.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_02.v         ;         ;
-; ../src/seq_03.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/seq_03.v         ;         ;
-; ../src/mux4x1_1bit.v             ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/mux4x1_1bit.v    ;         ;
-; ../src/mux4x1_4bits.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/mux4x1_4bits.v   ;         ;
-; ../src/Counter_User.v            ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/Counter_User.v   ;         ;
-; ../src/logica.v                  ; yes             ; User Verilog HDL File  ; C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/src/logica.v         ;         ;
-+----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                           ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path             ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
+; ../src/ButtonSync.v              ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/ButtonSync.v     ;         ;
+; ../src/top.v                     ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/top.v            ;         ;
+; ../src/REG_User.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_User.v       ;         ;
+; ../src/REG_FPGA.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_FPGA.v       ;         ;
+; ../src/REG_setup.v               ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/REG_setup.v      ;         ;
+; ../src/datapath.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/datapath.v       ;         ;
+; ../src/controle.v                ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/controle.v       ;         ;
+; ../src/mux2x1.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux2x1.v         ;         ;
+; ../src/Counter_time.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_time.v   ;         ;
+; ../src/FSM_clock.v               ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/FSM_clock.v      ;         ;
+; ../src/dec7seg.v                 ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/dec7seg.v        ;         ;
+; ../src/Counter__round.v          ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter__round.v ;         ;
+; ../src/Counter_FPGA.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_FPGA.v   ;         ;
+; ../src/seq_00.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/seq_00.v         ;         ;
+; ../src/seq_01.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/seq_01.v         ;         ;
+; ../src/seq_02.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/seq_02.v         ;         ;
+; ../src/seq_03.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/seq_03.v         ;         ;
+; ../src/mux4x1_1bit.v             ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux4x1_1bit.v    ;         ;
+; ../src/mux4x1_4bits.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/mux4x1_4bits.v   ;         ;
+; ../src/Counter_User.v            ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/Counter_User.v   ;         ;
+; ../src/logica.v                  ; yes             ; User Verilog HDL File  ; C:/GitHub/HDLGenius/src/logica.v         ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -232,28 +223,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 73             ;
+; Estimated Total logic elements              ; 121            ;
 ;                                             ;                ;
-; Total combinational functions               ; 67             ;
+; Total combinational functions               ; 115            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 38             ;
-;     -- 3 input functions                    ; 11             ;
-;     -- <=2 input functions                  ; 18             ;
+;     -- 4 input functions                    ; 64             ;
+;     -- 3 input functions                    ; 24             ;
+;     -- <=2 input functions                  ; 27             ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 67             ;
+;     -- normal mode                          ; 115            ;
 ;     -- arithmetic mode                      ; 0              ;
 ;                                             ;                ;
-; Total registers                             ; 34             ;
-;     -- Dedicated logic registers            ; 34             ;
+; Total registers                             ; 35             ;
+;     -- Dedicated logic registers            ; 35             ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 67             ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 34             ;
-; Total fan-out                               ; 394            ;
-; Average fan-out                             ; 1.68           ;
+; Maximum fan-out                             ; 35             ;
+; Total fan-out                               ; 590            ;
+; Average fan-out                             ; 2.08           ;
 +---------------------------------------------+----------------+
 
 
@@ -262,20 +253,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                 ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
-; |top                       ; 67 (0)            ; 34 (0)       ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                                ; work         ;
+; |top                       ; 115 (0)           ; 35 (0)       ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |top                                ; work         ;
 ;    |controle:U01|          ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|controle:U01                   ; work         ;
-;    |datapath:u00|          ; 58 (2)            ; 28 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00                   ; work         ;
-;       |ButtonSync:comb_3|  ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|ButtonSync:comb_3 ; work         ;
+;    |datapath:u00|          ; 106 (2)           ; 29 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00                   ; work         ;
+;       |ButtonSync:B00|     ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|ButtonSync:B00    ; work         ;
 ;       |Counter_FPGA:U03|   ; 14 (14)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_FPGA:U03  ; work         ;
 ;       |Counter_User:U04|   ; 8 (8)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_User:U04  ; work         ;
-;       |Counter_round:U01|  ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_round:U01 ; work         ;
+;       |Counter_round:U01|  ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_round:U01 ; work         ;
 ;       |Counter_time:U02|   ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|Counter_time:U02  ; work         ;
 ;       |REG_setup:R03|      ; 0 (0)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|REG_setup:R03     ; work         ;
-;       |dec7seg:hex2_D2|    ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex2_D2   ; work         ;
-;       |logica:UL1|         ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|logica:UL1        ; work         ;
-;       |mux2x1:Uhex00|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex00     ; work         ;
-;       |mux2x1:Uhex01|      ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex01     ; work         ;
-;       |mux2x1:Uhex04_1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex04_1   ; work         ;
+;       |dec7seg:hex0_D1|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex0_D1   ; work         ;
+;       |dec7seg:hex0_D2|    ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex0_D2   ; work         ;
+;       |dec7seg:hex2_D2|    ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|dec7seg:hex2_D2   ; work         ;
+;       |logica:UL1|         ; 13 (13)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|logica:UL1        ; work         ;
+;       |mux2x1:Uhex00|      ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex00     ; work         ;
+;       |mux2x1:Uhex01|      ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex01     ; work         ;
+;       |mux2x1:Uhex02_1|    ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex02_1   ; work         ;
+;       |mux2x1:Uhex03_1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex03_1   ; work         ;
+;       |mux2x1:Uhex04_1|    ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex04_1   ; work         ;
+;       |mux2x1:Uhex05_1|    ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|datapath:u00|mux2x1:Uhex05_1   ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -298,7 +294,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------+
-; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn3state                                     ;
+; State Machine - |top|datapath:u00|ButtonSync:B00|btn3state                                        ;
 +-------------------------+-------------------------+------------------------+----------------------+
 ; Name                    ; btn3state.EsperaApertar ; btn3state.EsperaSoltar ; btn3state.SaidaAtiva ;
 +-------------------------+-------------------------+------------------------+----------------------+
@@ -310,7 +306,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------+
-; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn2state                                     ;
+; State Machine - |top|datapath:u00|ButtonSync:B00|btn2state                                        ;
 +-------------------------+-------------------------+------------------------+----------------------+
 ; Name                    ; btn2state.EsperaApertar ; btn2state.EsperaSoltar ; btn2state.SaidaAtiva ;
 +-------------------------+-------------------------+------------------------+----------------------+
@@ -322,7 +318,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------+
-; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn1state                                     ;
+; State Machine - |top|datapath:u00|ButtonSync:B00|btn1state                                        ;
 +-------------------------+-------------------------+------------------------+----------------------+
 ; Name                    ; btn1state.EsperaApertar ; btn1state.EsperaSoltar ; btn1state.SaidaAtiva ;
 +-------------------------+-------------------------+------------------------+----------------------+
@@ -334,7 +330,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------+
-; State Machine - |top|datapath:u00|ButtonSync:comb_3|btn0state                                     ;
+; State Machine - |top|datapath:u00|ButtonSync:B00|btn0state                                        ;
 +-------------------------+-------------------------+------------------------+----------------------+
 ; Name                    ; btn0state.EsperaApertar ; btn0state.EsperaSoltar ; btn0state.SaidaAtiva ;
 +-------------------------+-------------------------+------------------------+----------------------+
@@ -359,22 +355,21 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+----------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                         ;
-+-------------------------------------------------------+--------------------+
-; Register name                                         ; Reason for Removal ;
-+-------------------------------------------------------+--------------------+
-; datapath:u00|Counter_round:U01|win                    ; Lost fanout        ;
-; datapath:u00|ButtonSync:comb_3|btn3state.EsperaSoltar ; Lost fanout        ;
-; datapath:u00|ButtonSync:comb_3|btn2state.EsperaSoltar ; Lost fanout        ;
-; datapath:u00|ButtonSync:comb_3|btn1state.EsperaSoltar ; Lost fanout        ;
-; datapath:u00|ButtonSync:comb_3|btn0state.EsperaSoltar ; Lost fanout        ;
-; controle:U01|state.Next_Round                         ; Lost fanout        ;
-; controle:U01|state~2                                  ; Lost fanout        ;
-; controle:U01|state~3                                  ; Lost fanout        ;
-; controle:U01|state~4                                  ; Lost fanout        ;
-; Total Number of Removed Registers = 9                 ;                    ;
-+-------------------------------------------------------+--------------------+
++-------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                      ;
++----------------------------------------------------+--------------------+
+; Register name                                      ; Reason for Removal ;
++----------------------------------------------------+--------------------+
+; datapath:u00|ButtonSync:B00|btn3state.EsperaSoltar ; Lost fanout        ;
+; datapath:u00|ButtonSync:B00|btn2state.EsperaSoltar ; Lost fanout        ;
+; datapath:u00|ButtonSync:B00|btn1state.EsperaSoltar ; Lost fanout        ;
+; datapath:u00|ButtonSync:B00|btn0state.EsperaSoltar ; Lost fanout        ;
+; controle:U01|state.Next_Round                      ; Lost fanout        ;
+; controle:U01|state~2                               ; Lost fanout        ;
+; controle:U01|state~3                               ; Lost fanout        ;
+; controle:U01|state~4                               ; Lost fanout        ;
+; Total Number of Removed Registers = 8              ;                    ;
++----------------------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -382,12 +377,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 34    ;
+; Total registers                              ; 35    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 20    ;
+; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -526,15 +521,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"                                                                                                                          ;
-+---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                          ;
-+---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; data    ; Input  ; Warning  ; Input port expression (61 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "data[63..61]" will be connected to GND. ;
-; q[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                              ;
-; q3      ; Output ; Info     ; Explicitly unconnected                                                                                                                           ;
-+---------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|REG_FPGA:R02"                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; q[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; q3      ; Output ; Info     ; Explicitly unconnected                                                              ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------+
@@ -546,202 +540,117 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux4x1_4bits:M02"                                                                                                                ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                                      ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; ENT0  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "ENT0[3..1]" will be connected to GND. ;
-; ENT1  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "ENT1[3..1]" will be connected to GND. ;
-; ENT2  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "ENT2[3..1]" will be connected to GND. ;
-; ENT3  ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (4 bits) it drives.  Extra input bit(s) "ENT3[3..1]" will be connected to GND. ;
-; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts                     ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|Counter_User:U04"                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; SEQUSER ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|seq_03:US03"                                                                                                 ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; b_i[6..3] ; Input ; Info     ; Stuck at GND            ;
+; b_i[2]    ; Input ; Info     ; Stuck at VCC            ;
+; b_i[1]    ; Input ; Info     ; Stuck at GND            ;
+; b_i[0]    ; Input ; Info     ; Stuck at VCC            ;
++-----------+-------+----------+-------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|seq_02:US02"                                                                                                 ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; a_i[4..3] ; Input ; Info     ; Stuck at VCC            ;
+; a_i[1..0] ; Input ; Info     ; Stuck at VCC            ;
+; a_i[6]    ; Input ; Info     ; Stuck at VCC            ;
+; a_i[5]    ; Input ; Info     ; Stuck at GND            ;
+; a_i[2]    ; Input ; Info     ; Stuck at GND            ;
+; b_i[6..5] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[2..0] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[4..3] ; Input ; Info     ; Stuck at GND            ;
++-----------+-------+----------+-------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|seq_01:US01"                                                                                                 ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1" ;
++-----------+-------+----------+---------------------------+
+; Port      ; Type  ; Severity ; Details                   ;
++-----------+-------+----------+---------------------------+
+; b_i[3..0] ; Input ; Info     ; Stuck at VCC              ;
+; b_i[6..4] ; Input ; Info     ; Stuck at GND              ;
++-----------+-------+----------+---------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|seq_00:US00"                                                                                                 ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                                  ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
-; saida ; Output ; Warning  ; Output or bidir port (4 bits) is wider than the port expression (1 bits) it drives; bit(s) "saida[3..1]" have no fanouts ;
-+-------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; a_i[3..0] ; Input ; Info     ; Stuck at VCC            ;
+; a_i[5..4] ; Input ; Info     ; Stuck at GND            ;
+; a_i[6]    ; Input ; Info     ; Stuck at VCC            ;
+; b_i[6..3] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[1..0] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[2]    ; Input ; Info     ; Stuck at GND            ;
++-----------+-------+----------+-------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|Counter_User:U04"                                                                            ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                                                  ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; ROUND ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+-------+--------+----------+----------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4" ;
++-------------+-------+----------+-------------------------+
+; Port        ; Type  ; Severity ; Details                 ;
++-------------+-------+----------+-------------------------+
+; bcd_i[3..2] ; Input ; Info     ; Stuck at GND            ;
++-------------+-------+----------+-------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex00"                                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d_o  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; a_i[4..3] ; Input ; Info     ; Stuck at VCC            ;
+; a_i[1..0] ; Input ; Info     ; Stuck at VCC            ;
+; a_i[6]    ; Input ; Info     ; Stuck at VCC            ;
+; a_i[5]    ; Input ; Info     ; Stuck at GND            ;
+; a_i[2]    ; Input ; Info     ; Stuck at GND            ;
+; b_i[6..5] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[2..0] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[4..3] ; Input ; Info     ; Stuck at GND            ;
++-----------+-------+----------+-------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex01"                                                                                                                                                         ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1" ;
++-----------+-------+----------+---------------------------+
+; Port      ; Type  ; Severity ; Details                   ;
++-----------+-------+----------+---------------------------+
+; b_i[3..1] ; Input ; Info     ; Stuck at VCC              ;
+; b_i[6..4] ; Input ; Info     ; Stuck at GND              ;
+; b_i[0]    ; Input ; Info     ; Stuck at GND              ;
++-----------+-------+----------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02_1"                                                                                                                                                    ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d_o  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|dec7seg:hex2_D2"                                                              ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; seg_o[6..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex02"                                                                                                                                                         ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; a_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03_1"                                                                                                                                                       ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex03"                                                                                                                                                         ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; a_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04_1"                                                                                                                                                    ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i  ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; d_o  ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|dec7seg:hex4_D4"                                                              ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port        ; Type   ; Severity ; Details                                                                             ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-; bcd_i[3..2] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; seg_o[6..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex04"                                                                                                                                                         ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; a_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05_1"                                                                                                                                                       ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05"                                                                                                                                                         ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                          ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; a_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; a_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; b_i     ; Input  ; Warning  ; Input port expression (7 bits) is wider than the input port (1 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; b_i[-1] ; Input  ; Info     ; Stuck at VCC                                                                                                                                                                     ;
-; d_o     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (7 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND.            ;
-+---------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "datapath:u00|mux2x1:Uhex05" ;
++-----------+-------+----------+-------------------------+
+; Port      ; Type  ; Severity ; Details                 ;
++-----------+-------+----------+-------------------------+
+; a_i[2..0] ; Input ; Info     ; Stuck at VCC            ;
+; a_i[5..3] ; Input ; Info     ; Stuck at GND            ;
+; a_i[6]    ; Input ; Info     ; Stuck at VCC            ;
+; b_i[4..3] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[1..0] ; Input ; Info     ; Stuck at VCC            ;
+; b_i[6]    ; Input ; Info     ; Stuck at VCC            ;
+; b_i[5]    ; Input ; Info     ; Stuck at GND            ;
+; b_i[2]    ; Input ; Info     ; Stuck at GND            ;
++-----------+-------+----------+-------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------+
@@ -768,64 +677,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sat Jul 06 15:05:29 2024
+    Info: Processing started: Tue Jul 09 19:30:27 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off genius -c genius
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/buttonsync.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/buttonsync.v
     Info (12023): Found entity 1: ButtonSync
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/top.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/top.v
     Info (12023): Found entity 1: top
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/reg_user.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_user.v
     Info (12023): Found entity 1: REG_User
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/reg_fpga.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_fpga.v
     Info (12023): Found entity 1: REG_FPGA
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/reg_setup.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/reg_setup.v
     Info (12023): Found entity 1: REG_setup
-Warning (10275): Verilog HDL Module Instantiation warning at datapath.v(217): ignored dangling comma in List of Port Connections
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/datapath.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/datapath.v
     Info (12023): Found entity 1: datapath
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/controle.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/controle.v
     Info (12023): Found entity 1: controle
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/mux2x1.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux2x1.v
     Info (12023): Found entity 1: mux2x1
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter_time.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_time.v
     Info (12023): Found entity 1: Counter_time
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/fsm_clock.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/fsm_clock.v
     Info (12023): Found entity 1: FSM_clock
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/dec7seg.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/dec7seg.v
     Info (12023): Found entity 1: dec7seg
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter__round.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter__round.v
     Info (12023): Found entity 1: Counter_round
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter_fpga.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_fpga.v
     Info (12023): Found entity 1: Counter_FPGA
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_00.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_00.v
     Info (12023): Found entity 1: seq_00
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_01.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_01.v
     Info (12023): Found entity 1: seq_01
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_02.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_02.v
     Info (12023): Found entity 1: seq_02
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/seq_03.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/seq_03.v
     Info (12023): Found entity 1: seq_03
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/mux4x1_1bit.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux4x1_1bit.v
     Info (12023): Found entity 1: mux4x1_1bit
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/mux4x1_4bits.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/mux4x1_4bits.v
     Info (12023): Found entity 1: mux4x1_4bits
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/counter_user.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/counter_user.v
     Info (12023): Found entity 1: Counter_User
-Info (12021): Found 1 design units, including 1 entities, in source file /users/alice/onedrive/documentos/github/hdlgenius/src/logica.v
+Info (12021): Found 1 design units, including 1 entities, in source file /github/hdlgenius/src/logica.v
     Info (12023): Found entity 1: logica
 Warning (10236): Verilog HDL Implicit Net warning at top.v(40): created implicit net for "w_sel"
-Warning (10236): Verilog HDL Implicit Net warning at datapath.v(298): created implicit net for "w_c05"
-Critical Warning (10846): Verilog HDL Instantiation warning at datapath.v(49): instance has no name
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(305): created implicit net for "w_c05"
+Warning (10236): Verilog HDL Implicit Net warning at datapath.v(335): created implicit net for "LEDS"
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10034): Output port "LEDR[5..0]" at top.v(23) has no driver
 Info (12128): Elaborating entity "datapath" for hierarchy "datapath:u00"
-Warning (10858): Verilog HDL warning at datapath.v(323): object END_User used but never assigned
-Warning (10739): Verilog HDL warning at datapath.v(51): actual bit length 4 differs from formal bit length 1
-Warning (10739): Verilog HDL warning at datapath.v(328): actual bit length 4 differs from formal bit length 1
-Warning (10030): Net "END_User" at datapath.v(323) has no driver or initial value, using a default initial value '0'
+Warning (10036): Verilog HDL or VHDL warning at datapath.v(335): object "LEDS" assigned a value but never read
+Warning (10858): Verilog HDL warning at datapath.v(60): object END_User used but never assigned
+Warning (10230): Verilog HDL assignment warning at datapath.v(329): truncated value with size 64 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at datapath.v(330): truncated value with size 64 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at datapath.v(331): truncated value with size 64 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at datapath.v(332): truncated value with size 64 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at datapath.v(335): truncated value with size 8 to match size of target (1)
+Warning (10030): Net "END_User" at datapath.v(60) has no driver or initial value, using a default initial value '0'
 Warning (10034): Output port "leds" at datapath.v(37) has no driver
-Info (12128): Elaborating entity "ButtonSync" for hierarchy "datapath:u00|ButtonSync:comb_3"
+Warning (10034): Output port "SEQFPGA" at datapath.v(40) has no driver
+Info (12128): Elaborating entity "ButtonSync" for hierarchy "datapath:u00|ButtonSync:B00"
 Info (12128): Elaborating entity "mux2x1" for hierarchy "datapath:u00|mux2x1:Uhex05"
 Info (12128): Elaborating entity "dec7seg" for hierarchy "datapath:u00|dec7seg:hex4_D4"
 Info (12128): Elaborating entity "Counter_time" for hierarchy "datapath:u00|Counter_time:U02"
@@ -849,22 +762,16 @@ Info (12128): Elaborating entity "seq_03" for hierarchy "datapath:u00|seq_03:US0
 Info (12128): Elaborating entity "mux4x1_4bits" for hierarchy "datapath:u00|mux4x1_4bits:M02"
 Info (12128): Elaborating entity "REG_User" for hierarchy "datapath:u00|REG_User:R01"
 Info (12128): Elaborating entity "REG_FPGA" for hierarchy "datapath:u00|REG_FPGA:R02"
-Critical Warning (10237): Verilog HDL warning at REG_FPGA.v(33): can't infer register for assignment in edge-triggered always construct because the clock isn't obvious. Generated combinational logic instead
-Warning (10034): Output port "q3" at REG_FPGA.v(16) has no driver
 Info (12128): Elaborating entity "REG_setup" for hierarchy "datapath:u00|REG_setup:R03"
 Info (12128): Elaborating entity "FSM_clock" for hierarchy "datapath:u00|FSM_clock:fsm_c"
-Warning (10230): Verilog HDL assignment warning at FSM_clock.v(27): truncated value with size 32 to match size of target (28)
-Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(18): inferring latch(es) for variable "C025Hz", which holds its previous value in one or more paths through the always construct
-Warning (10230): Verilog HDL assignment warning at FSM_clock.v(47): truncated value with size 32 to match size of target (28)
-Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(38): inferring latch(es) for variable "C2Hz", which holds its previous value in one or more paths through the always construct
-Warning (10230): Verilog HDL assignment warning at FSM_clock.v(67): truncated value with size 32 to match size of target (28)
-Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(58): inferring latch(es) for variable "C1Hz", which holds its previous value in one or more paths through the always construct
-Warning (10230): Verilog HDL assignment warning at FSM_clock.v(87): truncated value with size 32 to match size of target (28)
-Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(78): inferring latch(es) for variable "C05Hz", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "C05Hz" at FSM_clock.v(78)
-Info (10041): Inferred latch for "C1Hz" at FSM_clock.v(58)
-Info (10041): Inferred latch for "C2Hz" at FSM_clock.v(38)
-Info (10041): Inferred latch for "C025Hz" at FSM_clock.v(18)
+Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(20): inferring latch(es) for variable "C025Hz", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(40): inferring latch(es) for variable "C2Hz", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(60): inferring latch(es) for variable "C1Hz", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at FSM_clock.v(80): inferring latch(es) for variable "C05Hz", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "C05Hz" at FSM_clock.v(80)
+Info (10041): Inferred latch for "C1Hz" at FSM_clock.v(60)
+Info (10041): Inferred latch for "C2Hz" at FSM_clock.v(40)
+Info (10041): Inferred latch for "C025Hz" at FSM_clock.v(20)
 Info (12128): Elaborating entity "mux4x1_1bit" for hierarchy "datapath:u00|mux4x1_1bit:M01"
 Info (12128): Elaborating entity "logica" for hierarchy "datapath:u00|logica:UL1"
 Warning (10646): Verilog HDL Event Control warning at logica.v(15): posedge or negedge of vector "REG_SetupLEVEL" depends solely on its least-significant bit
@@ -874,32 +781,7 @@ Warning (10230): Verilog HDL assignment warning at logica.v(18): truncated value
 Warning (10230): Verilog HDL assignment warning at logica.v(19): truncated value with size 32 to match size of target (8)
 Warning (10230): Verilog HDL assignment warning at logica.v(20): truncated value with size 32 to match size of target (8)
 Info (12128): Elaborating entity "controle" for hierarchy "controle:U01"
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex5[6]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex5[5]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex5[4]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex5[3]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex5[2]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex5[1]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex4[6]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex4[5]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex4[4]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex4[3]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex4[2]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex4[1]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex3[6]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex3[5]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex3[4]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex3[3]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex3[2]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex3[1]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex2[6]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex2[5]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex2[4]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex2[3]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex2[2]" is missing source, defaulting to GND
-    Warning (12110): Net "datapath:u00|w_mux2x1_hex2[1]" is missing source, defaulting to GND
-Warning (12241): 18 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[0]" is stuck at GND
     Warning (13410): Pin "LEDR[1]" is stuck at GND
@@ -911,65 +793,34 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LEDR[7]" is stuck at GND
     Warning (13410): Pin "LEDR[8]" is stuck at GND
     Warning (13410): Pin "LEDR[9]" is stuck at GND
-    Warning (13410): Pin "HEX0[1]" is stuck at GND
-    Warning (13410): Pin "HEX0[2]" is stuck at GND
-    Warning (13410): Pin "HEX0[3]" is stuck at GND
-    Warning (13410): Pin "HEX0[4]" is stuck at GND
-    Warning (13410): Pin "HEX0[5]" is stuck at GND
-    Warning (13410): Pin "HEX0[6]" is stuck at GND
     Warning (13410): Pin "HEX1[1]" is stuck at GND
-    Warning (13410): Pin "HEX1[2]" is stuck at GND
-    Warning (13410): Pin "HEX1[3]" is stuck at GND
-    Warning (13410): Pin "HEX1[4]" is stuck at GND
-    Warning (13410): Pin "HEX1[5]" is stuck at GND
-    Warning (13410): Pin "HEX1[6]" is stuck at GND
-    Warning (13410): Pin "HEX2[1]" is stuck at GND
-    Warning (13410): Pin "HEX2[2]" is stuck at GND
-    Warning (13410): Pin "HEX2[3]" is stuck at GND
-    Warning (13410): Pin "HEX2[4]" is stuck at GND
-    Warning (13410): Pin "HEX2[5]" is stuck at GND
-    Warning (13410): Pin "HEX2[6]" is stuck at GND
     Warning (13410): Pin "HEX3[0]" is stuck at VCC
-    Warning (13410): Pin "HEX3[1]" is stuck at GND
-    Warning (13410): Pin "HEX3[2]" is stuck at GND
-    Warning (13410): Pin "HEX3[3]" is stuck at GND
-    Warning (13410): Pin "HEX3[4]" is stuck at GND
-    Warning (13410): Pin "HEX3[5]" is stuck at GND
-    Warning (13410): Pin "HEX3[6]" is stuck at GND
-    Warning (13410): Pin "HEX4[1]" is stuck at GND
-    Warning (13410): Pin "HEX4[2]" is stuck at GND
-    Warning (13410): Pin "HEX4[3]" is stuck at GND
-    Warning (13410): Pin "HEX4[4]" is stuck at GND
-    Warning (13410): Pin "HEX4[5]" is stuck at GND
-    Warning (13410): Pin "HEX4[6]" is stuck at GND
-    Warning (13410): Pin "HEX5[1]" is stuck at GND
-    Warning (13410): Pin "HEX5[2]" is stuck at GND
-    Warning (13410): Pin "HEX5[3]" is stuck at GND
-    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at VCC
+    Warning (13410): Pin "HEX3[3]" is stuck at VCC
+    Warning (13410): Pin "HEX5[1]" is stuck at VCC
     Warning (13410): Pin "HEX5[5]" is stuck at GND
-    Warning (13410): Pin "HEX5[6]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 9 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/prj/output_files/genius.map.smsg
+Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/GitHub/HDLGenius/prj/output_files/genius.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 141 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 190 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 74 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 109 warnings
-    Info: Peak virtual memory: 4586 megabytes
-    Info: Processing ended: Sat Jul 06 15:05:31 2024
-    Info: Elapsed time: 00:00:02
+    Info (21061): Implemented 123 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Peak virtual memory: 4587 megabytes
+    Info: Processing ended: Tue Jul 09 19:30:31 2024
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:01
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/alice/OneDrive/Documentos/GitHub/HDLGenius/prj/output_files/genius.map.smsg.
+The suppressed messages can be found in C:/GitHub/HDLGenius/prj/output_files/genius.map.smsg.
 
 

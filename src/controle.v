@@ -59,17 +59,18 @@ always@ (enter or end_FPGA or end_User or end_time or win or match or state)	beg
 		
 	endcase
 end	
+
 always@(state) begin
 	R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0;
 	
 	case(state)
-		Init: begin R1 = 1'b1; R2 = 1'b1; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end	
-		Setup: begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b1; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end
-		Play_FPGA:	begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b1; E4 = 1'b0; SEL = 1'b0; end	
-		Play_User: begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b1; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end		
-		Check: 	begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b1; SEL = 1'b0; end	
-		Next_Round:	 begin R1 = 1'b0; R2 = 1'b1; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end	
-		Result:	begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b1; end			
+		Init:       begin R1 = 1'b1; R2 = 1'b1; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end	
+		Setup:      begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b1; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end
+		Play_FPGA:	 begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b1; E4 = 1'b0; SEL = 1'b0; end	
+		Play_User:  begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b1; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end		
+		Check: 	    begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b1; SEL = 1'b0; end	
+		Next_Round: begin R1 = 1'b0; R2 = 1'b1; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b0; end	
+		Result:	    begin R1 = 1'b0; R2 = 1'b0; E1 = 1'b0; E2 = 1'b0; E3 = 1'b0; E4 = 1'b0; SEL = 1'b1; end			
 	endcase
 end
 

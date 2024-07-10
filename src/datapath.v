@@ -36,27 +36,40 @@ input wire [p_switch - 1:0] SWITCH;
 
 output wire [p_led - 1:0] leds;
 output wire [p_hex - 1:0] hex0, hex1, hex2, hex3, hex4, hex5;
-output wire end_FPGA, end_User, end_time, win, match, SEQFPGA;
+output wire end_FPGA, end_User, end_time, win, match;
+output wire [3:0] SEQFPGA;
 
 /////////////////////////////////////////////////////////////////////
 //button sync
 wire [3:0] NBTN;
 wire button0, button1, button2, button3;
 
-ButtonSync(
+ButtonSync B00(
 	.KEY0(KEY[0]), .KEY1(KEY[1]), .KEY2(KEY[2]), .KEY3(KEY[3]), .CLK(CLOCK_50),
 	.BTN0(button0), .BTN1(button1), .BTN2(button2), .BTN3(button3)
 );
 
-nor (NBTN, button0, button1, button2, button3);
+assign NBTN[0] = ~button0;
+assign NBTN[1] = ~button1;
+assign NBTN[2] = ~button2;
+assign NBTN[3] = ~button3;
 
 /////////////////////////////////////////////////////////////////////
+
+//COMP
+wire END_User; 
+wire [63:0] OUT_User;
+wire [63:0] OUT_FPGA;
+
+assign match = ((OUT_FPGA == OUT_User) & END_User) ? 1'b1 : 1'b0;
+
+///////////////////////////////////////////////////////////////////
 //A=1//
 //B=0//
 
 
 //hex5
-wire w_win; //DEVE CONCATENAR COM A SAÍDA WIN DE COUNTER_ROUND
+wire w_win; //DEVE CONCATENAR COM A SAÃDA WIN DE COUNTER_ROUND
 assign win = w_win;
 wire [6:0] w_mux2x1_hex5;
 mux2x1 Uhex05(
@@ -86,7 +99,7 @@ mux2x1 Uhex04(
 );
 
 dec7seg hex4_D4(
-    .bcd_i({2'b00, SETUP[7:6]}), //concatenação
+    .bcd_i({2'b00, SETUP[7:6]}), //concatenaÃ§Ã£o
     .seg_o(w_hex4_dec)
 );
 
@@ -170,7 +183,7 @@ mux2x1 Uhex00(
 );
 
 dec7seg hex0_D2(
-    .bcd_i(ROUND),
+    .bcd_i(ROUND[3:0]),
     .seg_o(w_hex0_dec_2)
 );
 
@@ -178,9 +191,6 @@ dec7seg hex0_D1(
     .bcd_i(POINTS[3:0]), //points[3:0]
     .seg_o(w_hex0_dec)
 );
-
-wire [p_counter_tempo-1:0] w_TEMPO; //?? já existe um wire TIME sendo usado em dec7seg 
-wire w_end_time; //?? já tem um wire end_time
 
 Counter_time U02 (    
 	 .CLKT(CLOCK_50), //? CLOCK_1Hz
@@ -196,9 +206,9 @@ Counter_round U01(
 	.R(R1),
 	.E(E4),
 	.win(win),
-	.ROUND(ROUND)
+	.ROUND(ROUND[3:0])
 );
-
+wire [3:0] SEQFPGA_seq;
 Counter_FPGA U03 (
 	.data(ROUND[3:0]),
 	.clk(CLOCK_50), // CLOCK_50
@@ -208,58 +218,54 @@ Counter_FPGA U03 (
 	.SEQFPGA(SEQFPGA_seq)
 );
 
+wire or_and_counter_user, and_counter_user;
+or(or_and_counter_user, NBTN[0], NBTN[1], NBTN[2], NBTN[3]);
+and(and_counter_user, or_and_counter_user, E2);
+
+wire [3:0] SEQUSER;
 Counter_User U04 (
 	.data(ROUND[3:0]),
 	.clk(CLOCK_50),
 	.R(R2),
 	.E(and_counter_user),
 	.tc(end_User),
+	.SEQUSER(SEQUSER) //NAO CONECTA EM LUGAR NENHUM
 );
 
 //SEQ
-
-wire [3:0] SEQFPGA_seq;
-
+wire [3:0] w_seq1, w_seq4, w_seq2, w_seq3 ;
 seq_00 US00 (
 	.address(SEQFPGA_seq),
-	.saida(w_seq1)
+	.saida(w_seq1[3:0])
 );
 
 seq_01 US01 (
 	.address(SEQFPGA_seq),
-	.saida(w_seq2)
+	.saida(w_seq2[3:0])
 );
 
 seq_02 US02 (
 	.address(SEQFPGA_seq),
-	.saida(w_seq3)
+	.saida(w_seq3[3:0])
 );
 
 seq_03 US03 (
 	.address(SEQFPGA_seq),
-	.saida(w_seq4)
+	.saida(w_seq4[3:0])
 );
 
-
-wire or_and_counter_user, and_counter_user;
-or(or_and_counter_user, NBTN[0], NBTN[1], NBTN[2], NBTN[3]);
-and(and_counter_user, or_and_counter_user, E2);
-
-
-wire w_seq1, w_seq2, w_seq3, w_seq4; //? nao deveria ser [3:0]
+wire [3:0] SEQ_FPGA;
 mux4x1_4bits M02 (
 	.SEL(SETUP[5:4]),
-	.ENT0(w_seq1),
-	.ENT1(w_seq2),
-	.ENT2(w_seq3),
-	.ENT3(w_seq4),
-	.saida(SEQFPGA) //? SEQFPGA deveria ter 4bits [3:0]
+	.ENT0(w_seq1[3:0]),
+	.ENT1(w_seq2[3:0]),
+	.ENT2(w_seq3[3:0]),
+	.ENT3(w_seq4[3:0]),
+	.saida(SEQ_FPGA[3:0]) //? SEQFPGA deveria ter 4bits [3:0]
 );
 
 //registradores
 wire reg_user_and_or, reg_user_and; 
-
-wire [63:0] OUT_User;
 
 REG_User R01(
 	.CLK(CLOCK_50),
@@ -272,12 +278,13 @@ REG_User R01(
 or(reg_user_and_or, NBTN[0], NBTN[1], NBTN[2], NBTN[3]); //?
 and(reg_user_and, reg_user_and_or, E2);
 
-wire [63:0] OUT_FPGA;
+wire CLKHZ;
+
 REG_FPGA R02(
 	.CLK(CLKHZ),
 	.R(R2),
 	.E(E3),
-	.data({SEQFPGA, OUT_FPGA[63:4]}),
+	.data({SEQ_FPGA[3:0], OUT_FPGA[63:4]}),
 	.q(OUT_FPGA),
 	.q3() //?
 );
@@ -300,7 +307,6 @@ FSM_clock fsm_c (
 	.C2Hz(w_c2)
 );
 
-wire CLKHZ;
 mux4x1_1bit M01(
 	.level(SETUP[7:6]),
 	.CL1(w_c025),
@@ -313,18 +319,19 @@ mux4x1_1bit M01(
 //logica
 logica UL1(
 	.REG_SetupLEVEL (SETUP[7:6]),
-	.ROUND (ROUND), 
+	.ROUND (ROUND[3:0]), 
 	.REG_SetupMAPA (SETUP[5:4]),
 	.POINTS (POINTS)
 );
 
-
-//COMP
-wire END_User;
-assign match = ((OUT_FPGA == OUT_User) & END_User) ? 1'b1 : 1'b0;
-
 //leds
-wire out_key;
-nor (out_key, KEY[3:0]);
+wire [3:0] out_key;
+assign out_key[0] = ~OUT_FPGA;
+assign out_key[1] = ~OUT_FPGA;
+assign out_key[2] = ~OUT_FPGA;
+assign out_key[3] = ~OUT_FPGA;
+
+
+assign LEDS = {OUT_FPGA[63:60], out_key[3:0]};
 
 endmodule
